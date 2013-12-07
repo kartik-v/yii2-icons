@@ -54,7 +54,7 @@ You can also call each icon-framework individually in your view or view layout l
 
 ```php
 use kartik\icons\Icon;
-Icon::map($this, Icon::ELUSIVE); // Maps the Elusive icon font framework
+Icon::map($this, Icon::EL); // Maps the Elusive icon font framework
 ```
 
 ### Displaying Icons
@@ -67,7 +67,7 @@ use kartik\icons\Icon;
 echo Icon::show('user'); 
 
 // Option 2: Specific Icon Call in a view. Additional options can also be passed to style the icon.
-echo Icon::show('user', ['class'=>'fa-2x'], Icon::FONTAWESOME); 
+echo Icon::show('user', ['class'=>'fa-2x'], Icon::FA); 
 ```
 
 
