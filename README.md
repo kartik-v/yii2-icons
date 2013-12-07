@@ -73,4 +73,4 @@ echo Icon::show('user', ['class'=>'fa-2x'], Icon::FA);
 
 ## License
 
-**yii2-icons** is released under the BSD 3-Clause License. See the bundled `LICENSE` for details.
+**yii2-icons** is released under the BSD 3-Clause License. See the bundled `LICENSE.md` for details.
