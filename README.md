@@ -1,7 +1,8 @@
 yii2-icons
 ==========
 
-This extension is a simple class to setup various icon frameworks to work with Yii. The icon frameworks supported are:
+This extension is a simple class to setup various icon frameworks to work with Yii. The icon frameworks currently supported are:
+
 1. [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
 2. [Elusive Icons](http://shoestrap.org/downloads/elusive-icons-webfont/)
 3. [Typicons](http://typicons.com/)
