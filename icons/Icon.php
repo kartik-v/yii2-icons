@@ -36,7 +36,7 @@ class Icon
 	 */
 	static $frameworks = [
 		self::FA => ['prefix' => 'fa fa-', 'class' => 'FontAwesomeAsset'],
-		self::EL => ['prefix' => 'el-', 'class' => 'ElusiveAsset'],
+		self::EL => ['prefix' => 'el-icon-', 'class' => 'ElusiveAsset'],
 		self::TYP => ['prefix' => 'typcn typcn-', 'class' => 'TypiconsAsset'],
 		self::WHHG => ['prefix' => 'icon-', 'class' => 'WhhgAsset'],
 		self::JUI => ['prefix' => 'ui-icon ui-icon-', 'class' => '\\yii\\jui\\ThemeAsset']
