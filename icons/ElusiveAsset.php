@@ -13,7 +13,7 @@ namespace kartik\icons;
  */
 class ElusiveAsset extends \yii\web\AssetBundle
 {
-	public $sourcePath = '@vendor/kartik-v/yii2-icons/kartik/vendor/elusive-iconfont';
+	public $sourcePath = '@vendor/kartik-v/yii2-icons/kartik/vendor/elusive';
 	public $css = array(
 		'css/elusive-webfont.min.css',
 	);
