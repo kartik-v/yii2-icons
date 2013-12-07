@@ -27,8 +27,8 @@ class Icon
 	static $frameworks = [
 		static::FONTAWESOME => ['prefix' => 'fa fa-', 'class' => 'FontAwesomeAsset'],
 		static::ELUSIVE => ['prefix' => 'el-', 'class' => 'ElusiveAsset'],
-		static::TYPICON => ['prefix' => 'typcn-', 'class' => 'TypiconAsset'],
-		static::JQUERYUI => ['prefix' => 'ui ui-', 'class' => '\\yii\\jui\\ThemeAsset'],
+		static::TYPICON => ['prefix' => 'typcn typcn-', 'class' => 'TypiconsAsset'],
+		static::JQUERYUI => ['prefix' => 'ui-icon ui-icon-', 'class' => '\\yii\\jui\\ThemeAsset'],
 	];
 	
 	/**
