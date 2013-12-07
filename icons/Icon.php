@@ -23,7 +23,7 @@ class Icon
 	const ELUSIVE = 'el';
 	const TYPICONS = 'typ';
 	const WHHG = 'whhg';
-	const JQUERYUI = 'jui';
+	const JUI = 'jui';
 
 	const PARAM_NOT_SET = "The 'icon-framework' option has not been setup in Yii params. Check your configuration file.";
 	const PARAM_INVALID = "Invalid or non-recognized 'icon-framework' has been setup in Yii params. Check your configuration file.";
@@ -33,7 +33,7 @@ class Icon
 		self::ELUSIVE => ['prefix' => 'el-', 'class' => 'ElusiveAsset'],
 		self::TYPICONS => ['prefix' => 'typcn typcn-', 'class' => 'TypiconsAsset'],
 		self::WHHG => ['prefix' => 'icon-', 'class' => 'WhhgAsset'],
-		self::JQUERYUI => ['prefix' => 'ui-icon ui-icon-', 'class' => '\\yii\\jui\\ThemeAsset']
+		self::JUI => ['prefix' => 'ui-icon ui-icon-', 'class' => '\\yii\\jui\\ThemeAsset']
 	];
 	
 	/**
