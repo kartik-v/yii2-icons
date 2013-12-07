@@ -11,24 +11,28 @@ use yii\base\InvalidConfigException;
  * - 'fa' for Font Awesome Icons
  * - 'el' for Elusive Font Icons
  * - 'typ' for Typicon Font Icons
+ * - 'whhg' for Web Hosting Hub Glyphs Icons
  * - 'jui' for JQuery UI Icons
  * 
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  */
 class Icon 
 {
+	const NS = '\\kartik\\icons\\';
 	const FONTAWESOME = 'fa';
 	const ELUSIVE = 'el';
 	const TYPICON = 'typ';
 	const JQUERYUI = 'jui';
-	
+	const WHHG = 'whhg';
+
 	const PARAM_NOT_SET = "The 'icon-framework' option has not been setup in Yii params. Check your configuration file.";
 	const PARAM_INVALID = "Invalid or non-recognized 'icon-framework' has been setup in Yii params. Check your configuration file.";
 	
 	static $frameworks = [
-		self::FONTAWESOME => ['prefix' => 'fa fa-', 'class' => 'FontAwesomeAsset'],
-		self::ELUSIVE => ['prefix' => 'el-', 'class' => 'ElusiveAsset'],
-		self::TYPICON => ['prefix' => 'typcn typcn-', 'class' => 'TypiconsAsset'],
+		self::FONTAWESOME => ['prefix' => 'fa fa-', 'class' => self::NS . 'FontAwesomeAsset'],
+		self::ELUSIVE => ['prefix' => 'el-', 'class' => self::NS . 'ElusiveAsset'],
+		self::TYPICON => ['prefix' => 'typcn typcn-', 'class' => self::NS . 'TypiconsAsset'],
+		self::WHHG => ['prefix' => 'icon-', 'class' => self::NS . 'WhhgAsset'],
 		self::JQUERYUI => ['prefix' => 'ui-icon ui-icon-', 'class' => '\\yii\\jui\\ThemeAsset'],
 	];
 	
@@ -38,7 +42,7 @@ class Icon
 	 * @var string the framework to be used with the application
 	 * @throws InvalidConfigException
 	 */
-	protected static function getFramework($framework) {
+	protected static function getFramework($framework = null) {
 		if (strlen($framework) == 0 && empty(Yii::$app->params['icon-framework'])) {
 			throw new InvalidConfigException(static::PARAM_NOT_SET);
 		}
@@ -54,14 +58,13 @@ class Icon
 	/**
 	 * Maps the icon framework to the current view. Call this in your view or layout file.
 	 *
-	 * @param object $view the view object to call the
+	 * @param object $view the view object
 	 * @param string $framework the name of the framework, if not passed it will default to
 	 * the Yii config param 'icon-framework'
 	 */
-	public static function map($view, $framework = null)
-	{
+	public static function map($view, $framework = null) {
 		$key = static::getFramework($framework);
-		$class = '\\kartik\\icons\\' . static::$frameworks[$key]['class'];
+		$class = static::$frameworks[$key]['class'];
 		$class::register($view);
 	}
 
