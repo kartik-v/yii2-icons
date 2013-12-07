@@ -60,12 +60,13 @@ class Icon
 	}
 
 	/**
-	 * Displays an icon based on the framework
+	 * Displays an icon based for a specific framework set in Yii Config Params.
 	 *
 	 * @param string $name the icon name
+	 * @param string $tag the html tag to wrap the icon (defaults to 'i')
 	 * @return string the html formatted icon
 	 */	
-	public static function show($name, $tag = 'i') {
+	public static function render($name, $tag = 'i') {
 		$key = static::getFramework();
 		$class = static::$frameworks[$key]['prefix'] . $name;
 		return Html::tag($tag, '', ['class' => $class]);
