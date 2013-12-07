@@ -50,7 +50,7 @@ Icon::map($this);
 
 ### Per View Setup
 
-You can also call each icon-framework individually in your view or view layout like below
+You can also call each icon-framework individually in your view or view layout like below. You can directly map the icon framework you wish to initialize specific to the view.
 
 ```php
 use kartik\icons\Icon;
