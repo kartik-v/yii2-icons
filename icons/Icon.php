@@ -21,7 +21,7 @@ class Icon
 	const NS = '\\kartik\\icons\\';
 	const FONTAWESOME = 'fa';
 	const ELUSIVE = 'el';
-	const TYPICON = 'typ';
+	const TYPICONS = 'typ';
 	const JQUERYUI = 'jui';
 	const WHHG = 'whhg';
 
@@ -31,7 +31,7 @@ class Icon
 	static $frameworks = [
 		self::FONTAWESOME => ['prefix' => 'fa fa-', 'class' => self::NS . 'FontAwesomeAsset'],
 		self::ELUSIVE => ['prefix' => 'el-', 'class' => self::NS . 'ElusiveAsset'],
-		self::TYPICON => ['prefix' => 'typcn typcn-', 'class' => self::NS . 'TypiconsAsset'],
+		self::TYPICONS => ['prefix' => 'typcn typcn-', 'class' => self::NS . 'TypiconsAsset'],
 		self::WHHG => ['prefix' => 'icon-', 'class' => self::NS . 'WhhgAsset'],
 		self::JQUERYUI => ['prefix' => 'ui-icon ui-icon-', 'class' => '\\yii\\jui\\ThemeAsset'],
 	];
