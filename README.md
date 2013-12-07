@@ -32,9 +32,43 @@ to the ```require``` section of your `composer.json` file.
 
 ## Usage
 
+### Global Setup
+
+In case you wish to setup one Icon framework globally, set the parameter `icon-framework` in the `params` array of your Yii Configuration File.
+
 ```php
-// add this to your code to use these classes
+'params' => [
+  'icon-framework' => 'fa',  // Font Awesome Icon framework
+]
 ```
+Initializing the globally setup framework in your view. Call this code in your view or view layout file.
+
+```php
+use kartik\icons\Icon;
+Icon::map($this);  
+```
+
+### Per View Setup
+
+You can also call each icon-framework individually in your view or view layout like below
+
+```php
+use kartik\icons\Icon;
+Icon::map($this, Icon::ELUSIVE); // Maps the Elusive icon font framework
+```
+
+### Displaying Icons
+After mapping your icon framework with one of the options above, you can display icons using `Icon::show` method. Icons can be displayed in one of the options below:
+
+```php
+use kartik\icons\Icon;
+// Uses the `icon-framework` setup in Yii config params
+echo Icon::show('user'); 
+
+// Specific Icon Call in a view
+echo Icon::show('user', ['class'=>'fa-2x'], Icon::FONTAWESOME); 
+```
+
 
 ## License
 
