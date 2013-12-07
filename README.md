@@ -1,7 +1,7 @@
 yii2-icons
 ==========
 
-This extension is a simple class to setup various icon frameworks to work with Yii. The icon frameworks currently supported are:
+This extension offers an easy method to setup various icon frameworks to work with Yii. Most popular and free icon frameworks available are currently supported. This list may be extended in future based on demand and feedback.
 
 1. [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
 2. [Elusive Icons](http://shoestrap.org/downloads/elusive-icons-webfont/)
@@ -58,14 +58,15 @@ Icon::map($this, Icon::ELUSIVE); // Maps the Elusive icon font framework
 ```
 
 ### Displaying Icons
-After mapping your icon framework with one of the options above, you can display icons using `Icon::show` method. Icons can be displayed in one of the options below:
+After mapping your icon framework with one of the options above, you can display icons using `Icon::show` method. Icons can be displayed using one of the options below:
 
 ```php
 use kartik\icons\Icon;
-// Uses the `icon-framework` setup in Yii config params
+
+// Option 1: Uses the `icon-framework` setup in Yii config params. 
 echo Icon::show('user'); 
 
-// Specific Icon Call in a view
+// Option 2: Specific Icon Call in a view. Additional options can also be passed to style the icon.
 echo Icon::show('user', ['class'=>'fa-2x'], Icon::FONTAWESOME); 
 ```
 
