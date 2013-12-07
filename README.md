@@ -6,7 +6,8 @@ This extension is a simple class to setup various icon frameworks to work with Y
 1. [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
 2. [Elusive Icons](http://shoestrap.org/downloads/elusive-icons-webfont/)
 3. [Typicons](http://typicons.com/)
-4. [JQuery UI Icons](http://api.jqueryui.com/theming/icons/)
+4. [Web Hosting Hub Glyphs](http://www.webhostinghub.com/glyphs/)
+5. [JQuery UI Icons](http://api.jqueryui.com/theming/icons/)
 
 ### Demo
 You can see a [demonstration here](http://demos.krajee.com/icons) on usage of these functions with documentation and examples.
