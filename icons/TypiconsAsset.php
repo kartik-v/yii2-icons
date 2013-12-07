@@ -11,7 +11,7 @@ namespace kartik\icons;
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  * @since 1.0
  */
-class TypiconAsset extends \yii\web\AssetBundle
+class TypiconsAsset extends \yii\web\AssetBundle
 {
 	public $sourcePath = '@vendor/kartik-v/yii2-icons/kartik/vendor/typicons';
 	public $css = array(
