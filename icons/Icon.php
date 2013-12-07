@@ -32,13 +32,13 @@ class Icon
 	const JUI = 'jui';
 	
 	/**
-	 * Icon framework valid configurations
+	 * Icon framework configurations
 	 */
-	 static $frameworks = [
-		self::FA => ['prefix' => 'fa fa-', 'class' => self::NS . 'FontAwesomeAsset'],
-		self::EL => ['prefix' => 'el-', 'class' => self::NS . 'ElusiveAsset'],
-		self::TYP => ['prefix' => 'typcn typcn-', 'class' => self::NS . 'TypiconsAsset'],
-		self::WHHG => ['prefix' => 'icon-', 'class' => self::NS . 'WhhgAsset'],
+	static $frameworks = [
+		self::FA => ['prefix' => 'fa fa-', 'class' => 'FontAwesomeAsset'],
+		self::EL => ['prefix' => 'el-', 'class' => 'ElusiveAsset'],
+		self::TYP => ['prefix' => 'typcn typcn-', 'class' => 'TypiconsAsset'],
+		self::WHHG => ['prefix' => 'icon-', 'class' => 'WhhgAsset'],
 		self::JUI => ['prefix' => 'ui-icon ui-icon-', 'class' => '\\yii\\jui\\ThemeAsset']
 	];
 	
@@ -71,6 +71,9 @@ class Icon
 	public static function map($view, $framework = null) {
 		$key = static::getFramework($framework);
 		$class = static::$frameworks[$key]['class'];
+		if (substr($class, 0, 1) != '\\') {
+			$class = static::NS . $class;
+		}
 		$class::register($view);
 	}
 
