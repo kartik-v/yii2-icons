@@ -29,11 +29,11 @@ class Icon
 	const PARAM_INVALID = "Invalid or non-recognized 'icon-framework' has been setup in Yii params. Check your configuration file.";
 	
 	static $frameworks = [
-		self::FONTAWESOME => ['prefix' => 'fa fa-', 'class' => self::NS . 'FontAwesomeAsset'],
-		self::ELUSIVE => ['prefix' => 'el-', 'class' => self::NS . 'ElusiveAsset'],
-		self::TYPICONS => ['prefix' => 'typcn typcn-', 'class' => self::NS . 'TypiconsAsset'],
-		self::WHHG => ['prefix' => 'icon-', 'class' => self::NS . 'WhhgAsset'],
-		self::JQUERYUI => ['prefix' => 'ui-icon ui-icon-', 'class' => '\\yii\\jui\\ThemeAsset'],
+		self::FONTAWESOME => ['prefix' => 'fa fa-', 'class' => 'FontAwesomeAsset'],
+		self::ELUSIVE => ['prefix' => 'el-', 'class' => 'ElusiveAsset'],
+		self::TYPICONS => ['prefix' => 'typcn typcn-', 'class' => 'TypiconsAsset'],
+		self::WHHG => ['prefix' => 'icon-', 'class' => 'WhhgAsset'],
+		self::JQUERYUI => ['prefix' => 'ui-icon ui-icon-', 'class' => '\\yii\\jui\\ThemeAsset']
 	];
 	
 	/**
@@ -65,6 +65,9 @@ class Icon
 	public static function map($view, $framework = null) {
 		$key = static::getFramework($framework);
 		$class = static::$frameworks[$key]['class'];
+		if (substr($class, 0, 1) != '\\') {
+			$class = static::NS . $class;
+		}
 		$class::register($view);
 	}
 
