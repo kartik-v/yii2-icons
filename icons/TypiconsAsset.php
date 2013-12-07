@@ -13,7 +13,7 @@ namespace kartik\icons;
  */
 class TypiconAsset extends \yii\web\AssetBundle
 {
-	public $sourcePath = '@vendor/kartik-v/yii2-icons/kartik/vendor/typicon-font';
+	public $sourcePath = '@vendor/kartik-v/yii2-icons/kartik/vendor/typicons';
 	public $css = array(
 		'font/typicons.min.css',
 	);
