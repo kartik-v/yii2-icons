@@ -1,7 +1,7 @@
 yii2-icons
 ==========
 
-This extension offers an easy method to setup various icon frameworks to work with Yii. Most popular and free icon frameworks available are currently supported. This list may be extended in future based on demand and feedback.
+This extension offers an easy method to setup various icon frameworks to work with Yii Framework 2.0. Most popular and free icon frameworks available are currently supported. This list may be extended in future based on demand and feedback.
 
 1. [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
 2. [Elusive Icons](http://shoestrap.org/downloads/elusive-icons-webfont/)
@@ -41,7 +41,7 @@ In case you wish to setup one Icon framework globally, set the parameter `icon-f
   'icon-framework' => 'fa',  // Font Awesome Icon framework
 ]
 ```
-Initializing the globally setup framework in your view. Call this code in your view or view layout file.
+To initialize the globally setup framework in your view, call this code in your view or view layout file.
 
 ```php
 use kartik\icons\Icon;
@@ -50,7 +50,7 @@ Icon::map($this);
 
 ### Per View Setup
 
-You can also call each icon-framework individually in your view or view layout like below. You can directly map the icon framework you wish to initialize specific to the view.
+You can also call each icon-framework individually in your view or view layout like below. Map any icon framework within each view as in the example below.
 
 ```php
 use kartik\icons\Icon;
