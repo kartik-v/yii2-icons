@@ -22,8 +22,8 @@ class Icon
 	const FONTAWESOME = 'fa';
 	const ELUSIVE = 'el';
 	const TYPICONS = 'typ';
-	const JQUERYUI = 'jui';
 	const WHHG = 'whhg';
+	const JQUERYUI = 'jui';
 
 	const PARAM_NOT_SET = "The 'icon-framework' option has not been setup in Yii params. Check your configuration file.";
 	const PARAM_INVALID = "Invalid or non-recognized 'icon-framework' has been setup in Yii params. Check your configuration file.";
