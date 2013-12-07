@@ -19,9 +19,9 @@ use yii\base\InvalidConfigException;
 class Icon 
 {
 	const NS = '\\kartik\\icons\\';
-	const FONTAWESOME = 'fa';
-	const ELUSIVE = 'el';
-	const TYPICONS = 'typ';
+	const FA = 'fa';
+	const EL = 'el';
+	const TYP = 'typ';
 	const WHHG = 'whhg';
 	const JUI = 'jui';
 
@@ -29,10 +29,10 @@ class Icon
 	const PARAM_INVALID = "Invalid or non-recognized 'icon-framework' has been setup in Yii params. Check your configuration file.";
 	
 	static $frameworks = [
-		self::FONTAWESOME => ['prefix' => 'fa fa-', 'class' => 'FontAwesomeAsset'],
-		self::ELUSIVE => ['prefix' => 'el-', 'class' => 'ElusiveAsset'],
-		self::TYPICONS => ['prefix' => 'typcn typcn-', 'class' => 'TypiconsAsset'],
-		self::WHHG => ['prefix' => 'icon-', 'class' => 'WhhgAsset'],
+		self::FA => ['prefix' => 'fa fa-', 'class' => self::NS . 'FontAwesomeAsset'],
+		self::EL => ['prefix' => 'el-', 'class' => self::NS . 'ElusiveAsset'],
+		self::TYP => ['prefix' => 'typcn typcn-', 'class' => self::NS . 'TypiconsAsset'],
+		self::WHHG => ['prefix' => 'icon-', 'class' => self::NS . 'WhhgAsset'],
 		self::JUI => ['prefix' => 'ui-icon ui-icon-', 'class' => '\\yii\\jui\\ThemeAsset']
 	];
 	
@@ -65,9 +65,6 @@ class Icon
 	public static function map($view, $framework = null) {
 		$key = static::getFramework($framework);
 		$class = static::$frameworks[$key]['class'];
-		if (substr($class, 0, 1) != '\\') {
-			$class = static::NS . $class;
-		}
 		$class::register($view);
 	}
 
