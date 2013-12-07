@@ -10,7 +10,7 @@ This extension offers an easy method to setup various icon frameworks to work wi
 5. [JQuery UI Icons](http://api.jqueryui.com/theming/icons/)
 
 ### Demo
-You can see a [demonstration here](http://demos.krajee.com/icons) on usage of these functions with documentation and examples.
+You can see a [demonstration here](http://demos.krajee.com/icons) on usage of this extension with documentation and examples.
 
 ## Installation
 
