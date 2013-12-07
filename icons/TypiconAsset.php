@@ -15,7 +15,7 @@ class TypiconAsset extends \yii\web\AssetBundle
 {
 	public $sourcePath = '@vendor/kartik-v/yii2-icons/kartik/vendor/typicon-font';
 	public $css = array(
-		'font/elusive-webfont.css',
+		'font/typicons.min.css',
 	);
 	public $depends = array(
 		'yii\web\YiiAsset'

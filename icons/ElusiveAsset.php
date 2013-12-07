@@ -15,7 +15,7 @@ class ElusiveAsset extends \yii\web\AssetBundle
 {
 	public $sourcePath = '@vendor/kartik-v/yii2-icons/kartik/vendor/elusive-iconfont';
 	public $css = array(
-		'css/elusive-webfont.css',
+		'css/elusive-webfont.min.css',
 	);
 	public $depends = array(
 		'yii\web\YiiAsset',
