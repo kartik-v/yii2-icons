@@ -19,16 +19,22 @@ use yii\base\InvalidConfigException;
 class Icon 
 {
 	const NS = '\\kartik\\icons\\';
+	const PARAM_NOT_SET = "The 'icon-framework' option has not been setup in Yii params. Check your configuration file.";
+	const PARAM_INVALID = "Invalid or non-recognized 'icon-framework' has been setup in Yii params. Check your configuration file.";
+
+	/**
+	 * Icon framework constants
+	 */
 	const FA = 'fa';
 	const EL = 'el';
 	const TYP = 'typ';
 	const WHHG = 'whhg';
 	const JUI = 'jui';
-
-	const PARAM_NOT_SET = "The 'icon-framework' option has not been setup in Yii params. Check your configuration file.";
-	const PARAM_INVALID = "Invalid or non-recognized 'icon-framework' has been setup in Yii params. Check your configuration file.";
 	
-	static $frameworks = [
+	/**
+	 * Icon framework valid configurations
+	 */
+	 static $frameworks = [
 		self::FA => ['prefix' => 'fa fa-', 'class' => self::NS . 'FontAwesomeAsset'],
 		self::EL => ['prefix' => 'el-', 'class' => self::NS . 'ElusiveAsset'],
 		self::TYP => ['prefix' => 'typcn typcn-', 'class' => self::NS . 'TypiconsAsset'],
