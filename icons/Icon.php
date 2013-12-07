@@ -6,7 +6,8 @@ use yii\base\InvalidConfigException;
 
 /**
  * Icon is a class for setting up icon frameworks to work with Yii in an easy way
- * You must set Yii param 'icon-framework' to one of the following in your config file:
+ * To setup a global default icon framework, you can set the Yii param 'icon-framework' 
+ * to one of the following values in your config file:
  * - 'fa' for Font Awesome Icons
  * - 'el' for Elusive Font Icons
  * - 'typ' for Typicon Font Icons
@@ -25,10 +26,10 @@ class Icon
 	const PARAM_INVALID = "Invalid or non-recognized 'icon-framework' has been setup in Yii params. Check your configuration file.";
 	
 	static $frameworks = [
-		static::FONTAWESOME => ['prefix' => 'fa fa-', 'class' => 'FontAwesomeAsset'],
-		static::ELUSIVE => ['prefix' => 'el-', 'class' => 'ElusiveAsset'],
-		static::TYPICON => ['prefix' => 'typcn typcn-', 'class' => 'TypiconsAsset'],
-		static::JQUERYUI => ['prefix' => 'ui-icon ui-icon-', 'class' => '\\yii\\jui\\ThemeAsset'],
+		self::FONTAWESOME => ['prefix' => 'fa fa-', 'class' => 'FontAwesomeAsset'],
+		self::ELUSIVE => ['prefix' => 'el-', 'class' => 'ElusiveAsset'],
+		self::TYPICON => ['prefix' => 'typcn typcn-', 'class' => 'TypiconsAsset'],
+		self::JQUERYUI => ['prefix' => 'ui-icon ui-icon-', 'class' => '\\yii\\jui\\ThemeAsset'],
 	];
 	
 	/**
@@ -37,25 +38,30 @@ class Icon
 	 * @var string the framework to be used with the application
 	 * @throws InvalidConfigException
 	 */
-	protected static function getFramework() {
-		if (empty(Yii::$app->params['icon-framework'])) {
+	protected static function getFramework($framework) {
+		if (strlen($framework) == 0 && empty(Yii::$app->params['icon-framework'])) {
 			throw new InvalidConfigException(static::PARAM_NOT_SET);
 		}
-		if (!in_array(Yii::$app->params['icon-framework'], static::$frameworks)) {
+		elseif (strlen($framework) == 0) {
+			$framework = Yii::$app->params['icon-framework'];
+		}
+		if (!in_array(Yii::$app->params['icon-framework'], array_keys(static::$frameworks))) {
 			throw new InvalidConfigException(static::PARAM_INVALID);
 		}
-		return Yii::$app->params['icon-framework'];
+		return $framework;
 	}
 	
 	/**
-	 * Sets the icon framework. Call this in your view layout file.
+	 * Maps the icon framework to the current view. Call this in your view or layout file.
 	 *
 	 * @param object $view the view object to call the
+	 * @param string $framework the name of the framework, if not passed it will default to
+	 * the Yii config param 'icon-framework'
 	 */
-	public static function framework($view)
+	public static function map($view, $framework = null)
 	{
-		$key = static::getFramework();
-		$class = static::$frameworks[$key]['class'];
+		$key = static::getFramework($framework);
+		$class = '\\kartik\\icons\\' . static::$frameworks[$key]['class'];
 		$class::register($view);
 	}
 
@@ -63,12 +69,15 @@ class Icon
 	 * Displays an icon based for a specific framework set in Yii Config Params.
 	 *
 	 * @param string $name the icon name
+	 * @param array $options the icon options
+	 * @param boolean $space whether to place a space after the icon, defaults to true 
 	 * @param string $tag the html tag to wrap the icon (defaults to 'i')
 	 * @return string the html formatted icon
 	 */	
-	public static function render($name, $tag = 'i') {
-		$key = static::getFramework();
+	public static function show($name, $options = [], $framework = null, $space = true, $tag = 'i') {
+		$key = static::getFramework($framework);
 		$class = static::$frameworks[$key]['prefix'] . $name;
-		return Html::tag($tag, '', ['class' => $class]);
+		$options['class'] = empty($options['class']) ? $class : $class . ' ' . $options['class'];
+		return Html::tag($tag, '', $options) . ($space ? ' ' : '');
 	}
 }
