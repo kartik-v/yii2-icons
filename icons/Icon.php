@@ -52,11 +52,11 @@ class Icon
 		if (strlen($framework) == 0 && empty(Yii::$app->params['icon-framework'])) {
 			throw new InvalidConfigException(static::PARAM_NOT_SET);
 		}
-		elseif (strlen($framework) == 0) {
-			$framework = Yii::$app->params['icon-framework'];
-		}
 		if (!in_array(Yii::$app->params['icon-framework'], array_keys(self::$_frameworks))) {
 			throw new InvalidConfigException(static::PARAM_INVALID);
+		}		
+		if (strlen($framework) == 0) {
+			return Yii::$app->params['icon-framework'];
 		}
 		return $framework;
 	}
