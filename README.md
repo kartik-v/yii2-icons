@@ -70,6 +70,24 @@ echo Icon::show('user');
 echo Icon::show('user', ['class'=>'fa-2x'], Icon::FA); 
 ```
 
+> NOTE:
+> The `kartik\icons\Icon::show` method outputs a HTML formatted text. So in order to display icons in Yii-2 components like Navbar or Nav, you must set `encodeLabels` to false. 
+
+```php
+$items = [
+    ['label' => Icon::show('home') . 'Home', 'url' => ['/site/index']],
+];
+
+// Your other code
+
+/* Note you must encodeLabels to false to display icons in labels */
+echo \yii\bootstrap\Nav::widget([
+    'items' => $items,
+    'encodeLabels' => false
+]);
+
+// Your other code
+```
 
 ## License
 
