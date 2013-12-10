@@ -34,7 +34,7 @@ class Icon
 	/**
 	 * Icon framework configurations
 	 */
-	private static $_frameworks = [
+	static $frameworks = [
 		self::FA => ['prefix' => 'fa fa-', 'class' => 'FontAwesomeAsset'],
 		self::EL => ['prefix' => 'el-icon-', 'class' => 'ElusiveAsset'],
 		self::TYP => ['prefix' => 'typcn typcn-', 'class' => 'TypiconsAsset'],
@@ -50,13 +50,13 @@ class Icon
 	 */
 	protected static function getFramework($framework = null) {
 		if (strlen($framework) == 0 && empty(Yii::$app->params['icon-framework'])) {
-			throw new InvalidConfigException(self::PARAM_NOT_SET);
+			throw new InvalidConfigException(static::PARAM_NOT_SET);
 		}
 		elseif (strlen($framework) == 0) {
 			$framework = Yii::$app->params['icon-framework'];
 		}
-		if (!in_array(Yii::$app->params['icon-framework'], array_keys(self::$_frameworks))) {
-			throw new InvalidConfigException(self::PARAM_INVALID);
+		if (!in_array(Yii::$app->params['icon-framework'], array_keys(static::$frameworks))) {
+			throw new InvalidConfigException(static::PARAM_INVALID);
 		}
 		return $framework;
 	}
@@ -70,9 +70,9 @@ class Icon
 	 */
 	public static function map($view, $framework = null) {
 		$key = static::getFramework($framework);
-		$class = self::$_frameworks[$key]['class'];
+		$class = static::$frameworks[$key]['class'];
 		if (substr($class, 0, 1) != '\\') {
-			$class = self::NS . $class;
+			$class = static::NS . $class;
 		}
 		$class::register($view);
 	}
@@ -88,7 +88,7 @@ class Icon
 	 */	
 	public static function show($name, $options = [], $framework = null, $space = true, $tag = 'i') {
 		$key = static::getFramework($framework);
-		$class = self::$_frameworks[$key]['prefix'] . $name;
+		$class = static::$frameworks[$key]['prefix'] . $name;
 		$options['class'] = empty($options['class']) ? $class : $class . ' ' . $options['class'];
 		return Html::tag($tag, '', $options) . ($space ? ' ' : '');
 	}
