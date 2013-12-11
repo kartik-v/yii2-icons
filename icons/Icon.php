@@ -78,10 +78,13 @@ class Icon
 	}
 
 	/**
-	 * Displays an icon based for a specific framework set in Yii Config Params.
+	 * Displays an icon for a specific framework.
 	 *
 	 * @param string $name the icon name
 	 * @param array $options the icon options
+	 * @param string $framework the icon framework name. If not passed will default to the
+	 * `icon-framework` param set in Yii Configuration file. Will throw an InvalidConfigException
+	 * if neither of the two is available.
 	 * @param boolean $space whether to place a space after the icon, defaults to true 
 	 * @param string $tag the html tag to wrap the icon (defaults to 'i')
 	 * @return string the html formatted icon
