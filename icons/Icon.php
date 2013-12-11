@@ -50,10 +50,10 @@ class Icon
 	 */
 	protected static function getFramework($framework = null) {
 		if (strlen($framework) == 0 && empty(Yii::$app->params['icon-framework'])) {
-			throw new InvalidConfigException(static::PARAM_NOT_SET);
+			throw new InvalidConfigException(self::PARAM_NOT_SET);
 		}
 		if (!in_array(Yii::$app->params['icon-framework'], array_keys(self::$_frameworks))) {
-			throw new InvalidConfigException(static::PARAM_INVALID);
+			throw new InvalidConfigException(self::PARAM_INVALID);
 		}		
 		if (strlen($framework) == 0) {
 			return Yii::$app->params['icon-framework'];
@@ -72,7 +72,7 @@ class Icon
 		$key = static::getFramework($framework);
 		$class = self::$_frameworks[$key]['class'];
 		if (substr($class, 0, 1) != '\\') {
-			$class = static::NS . $class;
+			$class = self::NS . $class;
 		}
 		$class::register($view);
 	}
