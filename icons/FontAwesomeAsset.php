@@ -13,12 +13,16 @@ namespace kartik\icons;
  */
 class FontAwesomeAsset extends \yii\web\AssetBundle
 {
+
 	public $sourcePath = '@vendor/fortawesome/font-awesome';
-	public $css = array(
-		'css/font-awesome.min.css',
-	);
 	public $depends = array(
 		'yii\web\YiiAsset',
 		'yii\bootstrap\BootstrapAsset'
 	);
+
+	public function init() {
+		$this->css = YII_DEBUG ? ['css/font-awesome.css'] : ['css/font-awesome.min.css'] ;
+		parent::init();
+	}
+	
 }
