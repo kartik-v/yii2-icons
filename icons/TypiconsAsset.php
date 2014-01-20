@@ -21,7 +21,7 @@ class TypiconsAsset extends \yii\web\AssetBundle {
     );
 
     public function init() {
-		$this->sourcePath = __DIR__ . '/../lib/typicons';
+        $this->sourcePath = __DIR__ . '/../lib/typicons';
         $this->css = YII_DEBUG ? ['css/typicons.css'] : ['css/typicons.min.css'];
         parent::init();
     }

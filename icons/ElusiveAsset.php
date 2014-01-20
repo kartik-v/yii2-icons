@@ -22,7 +22,7 @@ class ElusiveAsset extends \yii\web\AssetBundle {
     );
 
     public function init() {
-		$this->sourcePath = __DIR__ . '/../lib/elusive';
+        $this->sourcePath = __DIR__ . '/../lib/elusive';
         $this->css = YII_DEBUG ? ['css/elusive-webfont.css'] : ['css/elusive-webfont.min.css'];
         parent::init();
     }

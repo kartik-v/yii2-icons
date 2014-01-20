@@ -20,8 +20,9 @@ class WhhgAsset extends \yii\web\AssetBundle {
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset'
     );
+
     public function init() {
-		$this->sourcePath = __DIR__ . '/../lib/whhg';
+        $this->sourcePath = __DIR__ . '/../lib/whhg';
         $this->css = YII_DEBUG ? ['css/whhg.css'] : ['css/whhg.min.css'];
         parent::init();
     }
