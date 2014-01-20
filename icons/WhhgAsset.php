@@ -16,13 +16,14 @@ namespace kartik\icons;
  */
 class WhhgAsset extends \yii\web\AssetBundle {
 
-    public $sourcePath = '@vendor/kartik-v/yii2-icons/lib/whhg';
-    public $css = array(
-        'css/whhg.min.css',
-    );
     public $depends = array(
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset'
     );
+    public function init() {
+		$this->sourcePath = __DIR__ . '/../lib/whhg';
+        $this->css = YII_DEBUG ? ['css/whhg.css'] : ['css/whhg.min.css'];
+        parent::init();
+    }
 
 }

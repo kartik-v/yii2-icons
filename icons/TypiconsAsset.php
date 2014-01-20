@@ -16,12 +16,12 @@ namespace kartik\icons;
  */
 class TypiconsAsset extends \yii\web\AssetBundle {
 
-    public $sourcePath = '@vendor/kartik-v/yii2-icons/lib/typicons';
     public $depends = array(
         'yii\web\YiiAsset'
     );
 
     public function init() {
+		$this->sourcePath = __DIR__ . '/../lib/typicons';
         $this->css = YII_DEBUG ? ['css/typicons.css'] : ['css/typicons.min.css'];
         parent::init();
     }
