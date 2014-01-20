@@ -16,7 +16,7 @@ namespace kartik\icons;
  */
 class ElusiveAsset extends \yii\web\AssetBundle {
 
-    public $sourcePath = '@vendor/kartik-v/yii2-icons/kartik/lib/elusive';
+    public $sourcePath = '@vendor/kartik-v/yii2-icons/lib/elusive';
     public $depends = array(
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset'

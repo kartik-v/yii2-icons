@@ -16,7 +16,7 @@ namespace kartik\icons;
  */
 class WhhgAsset extends \yii\web\AssetBundle {
 
-    public $sourcePath = '@vendor/kartik-v/yii2-icons/kartik/lib/whhg';
+    public $sourcePath = '@vendor/kartik-v/yii2-icons/lib/whhg';
     public $css = array(
         'css/whhg.min.css',
     );
