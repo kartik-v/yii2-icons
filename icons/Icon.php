@@ -29,6 +29,7 @@ class Icon {
     const NS = '\\kartik\\icons\\';
     const PARAM_NOT_SET = "The 'icon-framework' option has not been setup in Yii params. Check your configuration file.";
     const PARAM_INVALID = "Invalid or non-recognized 'icon-framework' has been setup in Yii params. Check your configuration file.";
+    const FRAMEWORK_INVALID = "Invalid or non-existing framework '{framework}' called in your {method}() method.";
 
     /**
      * Icon framework constants
@@ -56,15 +57,19 @@ class Icon {
      * @var string the framework to be used with the application
      * @throws InvalidConfigException
      */
-    protected static function getFramework($framework = null) {
+    protected static function getFramework($framework = null, $method = 'show') {
+        if (strlen($framework) > 0 && !in_array($framework, array_keys(self::$_frameworks))) {
+            $replace = ['{framework}' => $framework, '{method}' => 'Icon::' . $method];
+            throw new InvalidConfigException(strtr(self::FRAMEWORK_INVALID, $replace));
+        }
+        if (strlen($framework) > 0) {
+            return $framework;
+        }
         if (strlen($framework) == 0 && empty(Yii::$app->params['icon-framework'])) {
             throw new InvalidConfigException(self::PARAM_NOT_SET);
         }
         if (!in_array(Yii::$app->params['icon-framework'], array_keys(self::$_frameworks))) {
             throw new InvalidConfigException(self::PARAM_INVALID);
-        }
-        if (strlen($framework) == 0) {
-            return Yii::$app->params['icon-framework'];
         }
         return $framework;
     }
@@ -77,7 +82,7 @@ class Icon {
      * the Yii config param 'icon-framework'
      */
     public static function map($view, $framework = null) {
-        $key = static::getFramework($framework);
+        $key = static::getFramework($framework, 'map');
         $class = self::$_frameworks[$key]['class'];
         if (substr($class, 0, 1) != '\\') {
             $class = self::NS . $class;
