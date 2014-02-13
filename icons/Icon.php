@@ -71,7 +71,7 @@ class Icon {
         if (!in_array(Yii::$app->params['icon-framework'], array_keys(self::$_frameworks))) {
             throw new InvalidConfigException(self::PARAM_INVALID);
         }
-        return $framework;
+        return Yii::$app->params['icon-framework'];
     }
 
     /**
