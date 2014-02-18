@@ -14,15 +14,13 @@ namespace kartik\icons;
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  * @since 1.0
  */
-class TypiconsAsset extends \yii\web\AssetBundle {
+class TypiconsAsset extends AssetBundle
+{
 
-    public $depends = array(
-        'yii\web\YiiAsset'
-    );
-
-    public function init() {
-        $this->sourcePath = __DIR__ . '/../lib/typicons';
-        $this->css = YII_DEBUG ? ['css/typicons.css'] : ['css/typicons.min.css'];
+    public function init()
+    {
+        $this->setSourcePath(__DIR__ . '/../lib/typicons');
+        $this->setupAssets('css', ['css/typicons']);
         parent::init();
     }
 

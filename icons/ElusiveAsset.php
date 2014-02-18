@@ -14,16 +14,13 @@ namespace kartik\icons;
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  * @since 1.0
  */
-class ElusiveAsset extends \yii\web\AssetBundle {
+class ElusiveAsset extends AssetBundle
+{
 
-    public $depends = array(
-        'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset'
-    );
-
-    public function init() {
-        $this->sourcePath = __DIR__ . '/../lib/elusive';
-        $this->css = YII_DEBUG ? ['css/elusive-webfont.css'] : ['css/elusive-webfont.min.css'];
+    public function init()
+    {
+        $this->setSourcePath(__DIR__ . '/../lib/elusive');
+        $this->setupAssets('css', ['css/elusive-webfont']);
         parent::init();
     }
 

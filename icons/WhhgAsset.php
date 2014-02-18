@@ -14,16 +14,13 @@ namespace kartik\icons;
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  * @since 1.0
  */
-class WhhgAsset extends \yii\web\AssetBundle {
+class WhhgAsset extends AssetBundle
+{
 
-    public $depends = array(
-        'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset'
-    );
-
-    public function init() {
-        $this->sourcePath = __DIR__ . '/../lib/whhg';
-        $this->css = YII_DEBUG ? ['css/whhg.css'] : ['css/whhg.min.css'];
+    public function init()
+    {
+        $this->setSourcePath(__DIR__ . '/../lib/whhg');
+        $this->setupAssets('css', ['css/whhg']);
         parent::init();
     }
 

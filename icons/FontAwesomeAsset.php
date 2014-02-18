@@ -14,7 +14,8 @@ namespace kartik\icons;
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  * @since 1.0
  */
-class FontAwesomeAsset extends \yii\web\AssetBundle {
+class FontAwesomeAsset extends AssetBundle
+{
 
     public $sourcePath = '@vendor/fortawesome/font-awesome';
     public $depends = array(
@@ -22,8 +23,9 @@ class FontAwesomeAsset extends \yii\web\AssetBundle {
         'yii\bootstrap\BootstrapAsset'
     );
 
-    public function init() {
-        $this->css = YII_DEBUG ? ['css/font-awesome.css'] : ['css/font-awesome.min.css'];
+    public function init()
+    {
+        $this->setupAssets('css', ['css/font-awesome']);
         parent::init();
     }
 
