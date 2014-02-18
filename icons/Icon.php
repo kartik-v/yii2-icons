@@ -24,7 +24,8 @@ use yii\base\InvalidConfigException;
  * 
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  */
-class Icon {
+class Icon
+{
 
     const NS = '\\kartik\\icons\\';
     const PARAM_NOT_SET = "The 'icon-framework' option has not been setup in Yii params. Check your configuration file.";
@@ -57,7 +58,8 @@ class Icon {
      * @var string the framework to be used with the application
      * @throws InvalidConfigException
      */
-    protected static function getFramework($framework = null, $method = 'show') {
+    protected static function getFramework($framework = null, $method = 'show')
+    {
         if (strlen($framework) > 0 && !in_array($framework, array_keys(self::$_frameworks))) {
             $replace = ['{framework}' => $framework, '{method}' => 'Icon::' . $method];
             throw new InvalidConfigException(strtr(self::FRAMEWORK_INVALID, $replace));
@@ -81,7 +83,8 @@ class Icon {
      * @param string $framework the name of the framework, if not passed it will default to
      * the Yii config param 'icon-framework'
      */
-    public static function map($view, $framework = null) {
+    public static function map($view, $framework = null)
+    {
         $key = static::getFramework($framework, 'map');
         $class = self::$_frameworks[$key]['class'];
         if (substr($class, 0, 1) != '\\') {
@@ -102,7 +105,8 @@ class Icon {
      * @param string $tag the html tag to wrap the icon (defaults to 'i')
      * @return string the html formatted icon
      */
-    public static function show($name, $options = [], $framework = null, $space = true, $tag = 'i') {
+    public static function show($name, $options = [], $framework = null, $space = true, $tag = 'i')
+    {
         $key = static::getFramework($framework);
         $class = self::$_frameworks[$key]['prefix'] . $name;
         $options['class'] = empty($options['class']) ? $class : $class . ' ' . $options['class'];
