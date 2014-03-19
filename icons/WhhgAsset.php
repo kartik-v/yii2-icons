@@ -17,11 +17,11 @@ namespace kartik\icons;
 class WhhgAsset extends AssetBundle
 {
 
-    public function init()
-    {
-        $this->setSourcePath(__DIR__ . '/../lib/whhg');
-        $this->setupAssets('css', ['css/whhg']);
-        parent::init();
-    }
+	public function init()
+	{
+		$this->setSourcePath(__DIR__ . '/../lib/whhg');
+		$this->setupAssets('css', ['css/whhg']);
+		parent::init();
+	}
 
 }

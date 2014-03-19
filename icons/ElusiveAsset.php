@@ -17,11 +17,11 @@ namespace kartik\icons;
 class ElusiveAsset extends AssetBundle
 {
 
-    public function init()
-    {
-        $this->setSourcePath(__DIR__ . '/../lib/elusive');
-        $this->setupAssets('css', ['css/elusive-webfont']);
-        parent::init();
-    }
+	public function init()
+	{
+		$this->setSourcePath(__DIR__ . '/../lib/elusive');
+		$this->setupAssets('css', ['css/elusive-webfont']);
+		parent::init();
+	}
 
 }
