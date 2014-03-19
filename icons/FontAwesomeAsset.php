@@ -14,7 +14,7 @@ namespace kartik\icons;
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  * @since 1.0
  */
-class FontAwesomeAsset extends AssetBundle
+class FontAwesomeAsset extends \kartik\widgets\AssetBundle
 {
 
 	public $sourcePath = '@vendor/fortawesome/font-awesome';

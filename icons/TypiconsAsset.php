@@ -14,7 +14,7 @@ namespace kartik\icons;
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  * @since 1.0
  */
-class TypiconsAsset extends AssetBundle
+class TypiconsAsset extends \kartik\widgets\AssetBundle
 {
 
 	public function init()

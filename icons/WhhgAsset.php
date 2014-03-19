@@ -14,7 +14,7 @@ namespace kartik\icons;
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  * @since 1.0
  */
-class WhhgAsset extends AssetBundle
+class WhhgAsset extends \kartik\widgets\AssetBundle
 {
 
 	public function init()

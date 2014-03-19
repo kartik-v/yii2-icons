@@ -14,7 +14,7 @@ namespace kartik\icons;
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  * @since 1.0
  */
-class ElusiveAsset extends AssetBundle
+class ElusiveAsset extends \kartik\widgets\AssetBundle
 {
 
 	public function init()
