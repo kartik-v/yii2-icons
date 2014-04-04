@@ -17,11 +17,11 @@ namespace kartik\icons;
 class TypiconsAsset extends \kartik\widgets\AssetBundle
 {
 
-	public function init()
-	{
-		$this->setSourcePath(__DIR__ . '/../lib/typicons');
-		$this->setupAssets('css', ['css/typicons']);
-		parent::init();
-	}
+    public function init()
+    {
+        $this->setSourcePath(__DIR__ . '/../lib/typicons');
+        $this->setupAssets('css', ['css/typicons']);
+        parent::init();
+    }
 
 }

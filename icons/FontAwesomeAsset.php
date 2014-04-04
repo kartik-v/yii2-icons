@@ -17,16 +17,16 @@ namespace kartik\icons;
 class FontAwesomeAsset extends \kartik\widgets\AssetBundle
 {
 
-	public $sourcePath = '@vendor/fortawesome/font-awesome';
-	public $depends = array(
-		'yii\web\YiiAsset',
-		'yii\bootstrap\BootstrapAsset'
-	);
+    public $sourcePath = '@vendor/fortawesome/font-awesome';
+    public $depends = array(
+        'yii\web\YiiAsset',
+        'yii\bootstrap\BootstrapAsset'
+    );
 
-	public function init()
-	{
-		$this->setupAssets('css', ['css/font-awesome']);
-		parent::init();
-	}
+    public function init()
+    {
+        $this->setupAssets('css', ['css/font-awesome']);
+        parent::init();
+    }
 
 }
