@@ -1,27 +1,27 @@
 {
-	"name": "kartik-v/yii2-icons",
-	"description": "Set of icon frameworks for use in Yii Framework 2.0",
-	"keywords": ["yii", "yii2", "extension", "icon", "font"],
-	"homepage": "https://github.com/kartik-v/yii2-icons",
-	"type": "yii2-extension",
-	"license": "BSD 3-Clause",
-	"authors": [
-		{
-			"name": "Kartik Visweswaran",
-			"email": "kartikv2@gmail.com",
-			"homepage": "http://demos.krajee.com/"
-		}
-	],
-	"require": {
-		"yiisoft/yii2": "dev-master",
-		"yiisoft/yii2-bootstrap": "dev-master",
-		"yiisoft/yii2-jui": "dev-master",
-		"fortawesome/font-awesome": "dev-master",
-		"kartik-v/yii2-widgets": "dev-master"
-	},
-	"autoload": {
-		"psr-4": {
-			"kartik\\": ""
-		}
-	}
+    "name": "kartik-v/yii2-icons",
+    "description": "Set of icon frameworks for use in Yii Framework 2.0",
+    "keywords": ["yii", "yii2", "extension", "icon", "font"],
+    "homepage": "https://github.com/kartik-v/yii2-icons",
+    "type": "yii2-extension",
+    "license": "BSD 3-Clause",
+    "authors": [
+        {
+            "name": "Kartik Visweswaran",
+            "email": "kartikv2@gmail.com",
+            "homepage": "http://demos.krajee.com/"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "dev-master",
+        "yiisoft/yii2-bootstrap": "dev-master",
+        "yiisoft/yii2-jui": "dev-master",
+        "fortawesome/font-awesome": "dev-master",
+        "kartik-v/yii2-widgets": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "kartik\\": ""
+        }
+    }
 }
