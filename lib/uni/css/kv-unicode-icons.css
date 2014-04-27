@@ -72,6 +72,14 @@
     content: '\265F';
 }
 
+.uni-shogi-white:before {
+    content: '\2616';
+}
+
+.uni-shogi:before {
+    content: '\2617';
+}
+
 /**
  * Playing card symbols
  */
@@ -108,184 +116,204 @@
 }
 
 /**
- * Roman numerals
+ * Currency symbols
  */
-.uni-roman-1:before {
-    content: '\2160';
+.uni-dollar:before {
+    content: '\0024';
 }
 
-.uni-roman-2:before {
-    content: '\2161';
+.uni-cent:before {
+    content: '\00A2';
 }
 
-.uni-roman-3:before {
-    content: '\2162';
+.uni-pound:before {
+    content: '\00A3';
 }
 
-.uni-roman-4:before {
-    content: '\2163';
+.uni-currency:before {
+    content: '\00A4';
 }
 
-.uni-roman-5:before {
-    content: '\2164';
+.uni-yen:before {
+    content: '\00A5';
 }
 
-.uni-roman-6:before {
-    content: '\2165';
+.uni-baht:before {
+    content: '\0E3F';
 }
 
-.uni-roman-7:before {
-    content: '\2166';
+.uni-euro-unit:before {
+    content: '\20A0';
 }
 
-.uni-roman-8:before {
-    content: '\2167';
+.uni-colon:before {
+    content: '\20A1';
 }
 
-.uni-roman-9:before {
-    content: '\2168';
+.uni-naira:before {
+    content: '\20A6';
 }
 
-.uni-roman-10:before {
-    content: '\2169';
+.uni-won:before {
+    content: '\20A9';
 }
 
-.uni-roman-11:before {
-    content: '\216A';
+.uni-euro:before {
+    content: '\20AC';
 }
 
-.uni-roman-12:before {
-    content: '\216B';
+.uni-peso:before {
+    content: '\20B1';
 }
 
-.uni-roman-50:before {
-    content: '\216C';
+.uni-guarani:before {
+    content: '\20B2';
 }
 
-.uni-roman-100:before {
-    content: '\216D';
+.uni-austral:before {
+    content: '\20B3';
 }
 
-.uni-roman-500:before {
-    content: '\216E';
+.uni-hryvnia:before {
+    content: '\20B4';
 }
 
-.uni-roman-1000:before {
-    content: '\216F';
+.uni-cedi:before {
+    content: '\20B5';
 }
 
-.uni-roman-1-sm:before {
-    content: '\2170';
+.uni-tenge:before {
+    content: '\20B8';
 }
 
-.uni-roman-2-sm:before {
-    content: '\2171';
+.uni-indian-rupee:before {
+    content: '\20B9';
 }
 
-.uni-roman-3-sm:before {
-    content: '\2172';
+.uni-rial:before {
+    content: '\FDFC';
 }
 
-.uni-roman-4-sm:before {
-    content: '\2173';
+.uni-dollar-small:before {
+    content: '\FE69';
 }
 
-.uni-roman-5-sm:before {
-    content: '\2174';
+.uni-dollar-full:before {
+    content: '\FF04';
 }
 
-.uni-roman-6-sm:before {
-    content: '\2175';
+.uni-cent-full:before {
+    content: '\FFE0';
 }
 
-.uni-roman-7-sm:before {
-    content: '\2176';
+.uni-pound-full:before {
+    content: '\FFE1';
 }
 
-.uni-roman-8-sm:before {
-    content: '\2177';
+.uni-yen-full:before {
+    content: '\FFE5';
 }
 
-.uni-roman-9-sm:before {
-    content: '\2178';
-}
-
-.uni-roman-10-sm:before {
-    content: '\2179';
-}
-
-.uni-roman-11-sm:before {
-    content: '\217A';
-}
-
-.uni-roman-12-sm:before {
-    content: '\217B';
-}
-
-.uni-roman-50-sm:before {
-    content: '\217C';
-}
-
-.uni-roman-100-sm:before {
-    content: '\217D';
-}
-
-.uni-roman-500-sm:before {
-    content: '\217E';
-}
-
-.uni-roman-1000-sm:before {
-    content: '\217F';
+.uni-won-full:before {
+    content: '\FFE6';
 }
 
 /**
  * Arrows and shapes
  */
-.uni-arrow-left:before {
+.uni-arrow-l:before {
     content: '\2190';
 }
 
-.uni-arrow-up:before {
+.uni-arrow-u:before {
     content: '\2191';
 }
 
-.uni-arrow-right:before {
+.uni-arrow-r:before {
     content: '\2192';
 }
 
-.uni-arrow-down:before {
+.uni-arrow-d:before {
     content: '\2193';
 }
 
-.uni-arrow-north-west:before {
+.uni-arrow-lr:before {
+    content: '\2194';
+}
+
+.uni-arrow-ud:before {
+    content: '\2195';
+}
+
+.uni-arrow-nw:before {
     content: '\2196';
 }
 
-.uni-arrow-north-east:before {
+.uni-arrow-ne:before {
     content: '\2197';
 }
 
-.uni-arrow-south-east:before {
+.uni-arrow-se:before {
     content: '\2198';
 }
 
-.uni-arrow-south-west:before {
+.uni-arrow-sw:before {
     content: '\2199';
 }
 
-.uni-arrow-left-white:before {
+.uni-arrow-double-l:before {
+    content: '\2190';
+}
+
+.uni-arrow-double-u:before {
+    content: '\21D1';
+}
+
+.uni-arrow-double-r:before {
+    content: '\21D2';
+}
+
+.uni-arrow-double-d:before {
+    content: '\21D3';
+}
+
+.uni-arrow-double-lr:before {
+    content: '\21D4';
+}
+
+.uni-arrow-double-ud:before {
+    content: '\21D5';
+}
+
+.uni-arrow-double-nw:before {
+    content: '\21D6';
+}
+
+.uni-arrow-double-ne:before {
+    content: '\21D7';
+}
+
+.uni-arrow-double-se:before {
+    content: '\21D8';
+}
+
+.uni-arrow-double-sw:before {
+    content: '\21D9';
+}
+
+.uni-arrow-l-white:before {
     content: '\21E6';
 }
 
-.uni-arrow-up-white:before {
+.uni-arrow-u-white:before {
     content: '\21E7';
 }
 
-.uni-arrow-right-white:before {
+.uni-arrow-r-white:before {
     content: '\21E8';
 }
 
-.uni-arrow-down-white:before {
+.uni-arrow-d-white:before {
     content: '\21E9';
 }
 
@@ -303,6 +331,172 @@
 
 .uni-triangle-down:before {
     content: '\25BC';
+}
+
+.uni-square:before {
+    content: '\25A0';
+}
+
+.uni-square-alt:before {
+    content: '\25A1';
+}
+
+.uni-square-round:before {
+    content: '\25A2';
+}
+
+.uni-square-bullet:before {
+    content: '\25A3';
+}
+
+.uni-square-hfill:before {
+    content: '\25A4';
+}
+
+.uni-square-vfill:before {
+    content: '\25A5';
+}
+
+.uni-square-xfill:before {
+    content: '\25A6';
+}
+
+.uni-square-diagfill:before {
+    content: '\25A7';
+}
+
+.uni-square-diagfill-alt:before {
+    content: '\25A8';
+}
+
+.uni-square-xdiagfill:before {
+    content: '\25A9';
+}
+
+.uni-square-small-alt:before {
+    content: '\25AA';
+}
+
+.uni-square-small:before {
+    content: '\25AB';
+}
+
+.uni-rectangle-alt:before {
+    content: '\25AC';
+}
+
+.uni-rectangle:before {
+    content: '\25AD';
+}
+
+.uni-rectangle-v-alt:before {
+    content: '\25AE';
+}
+
+.uni-rectangle-v:before {
+    content: '\25AF';
+}
+
+/**
+ * Circle arrows
+ */
+
+.uni-undo:before {
+    content: '\21B6';
+}
+
+.uni-redo:before {
+    content: '\21B7';
+}
+
+.uni-arrow-anti-cw:before {
+    content: '\21BA';
+}
+
+.uni-arrow-cw:before {
+    content: '\21BB';
+}
+
+.uni-undo-alt:before {
+    content: '\27F2';
+}
+
+.uni-redo-alt:before {
+    content: '\27F3';
+}
+
+/**
+ * Harpoons
+ */
+.uni-arrow-harpoon-lu:before {
+    content: '\21BC';
+}
+
+.uni-arrow-harpoon-ld:before {
+    content: '\21BD';
+}
+
+.uni-arrow-harpoon-ur:before {
+    content: '\21BE';
+}
+
+.uni-arrow-harpoon-ul:before {
+    content: '\21BF';
+}
+
+.uni-arrow-harpoon-ru:before {
+    content: '\21C0';
+}
+
+.uni-arrow-harpoon-rd:before {
+    content: '\21C1';
+}
+
+.uni-arrow-harpoon-dr:before {
+    content: '\21C2';
+}
+
+.uni-arrow-harpoon-dl:before {
+    content: '\21C3';
+}
+
+/**
+ * Paired arrows
+ */
+.uni-arrow-pair-rl:before {
+    content: '\21C4';
+}
+
+.uni-arrow-pair-ud:before {
+    content: '\21C5';
+}
+
+.uni-arrow-pair-lr:before {
+    content: '\21C6';
+}
+
+.uni-arrow-pair-ll:before {
+    content: '\21C7';
+}
+
+.uni-arrow-pair-uu:before {
+    content: '\21C8';
+}
+
+.uni-arrow-pair-rr:before {
+    content: '\21C9';
+}
+
+.uni-arrow-pair-dd:before {
+    content: '\21CA';
+}
+
+.uni-arrow-harpoon-pair-lr:before {
+    content: '\21CB';
+}
+
+.uni-arrow-harpoon-pair-rl:before {
+    content: '\21CC';
 }
 
 /**
@@ -349,6 +543,17 @@
 
 .uni-biohazard:before {
     content: '\2623';
+}
+
+/**
+ * Medical & healing symbols
+ */
+.uni-caduceus:before {
+    content: '\2624';
+}
+
+.uni-ankh:before {
+    content: '\2625';
 }
 
 /**
@@ -434,10 +639,6 @@
 
 .uni-quote-double:before {
     content: '\275E';
-}
-
-.uni-paragraph :before {
-    content: '\2761';
 }
 
 /**
@@ -621,6 +822,10 @@
 
 .uni-x-ballot-heavy:before {
     content: '\2718';
+}
+
+.uni-wheel:before {
+    content: '\2638';
 }
 
 /**
@@ -934,4 +1139,227 @@
 
 .uni-asterisk-ts-alt:before {
     content: '\274B'
+}
+
+/**
+ * Astrological Signs
+ */
+
+.uni-mercury:before {
+    content: '\263F'
+}
+
+.uni-venus:before, .uni-female:before {
+    content: '\2640'
+}
+
+.uni-earth:before {
+    content: '\2641'
+}
+
+.uni-mars:before, .uni-male:before {
+    content: '\2642'
+}
+
+.uni-jupiter:before {
+    content: '\2643'
+}
+
+.uni-saturn:before {
+    content: '\2644'
+}
+
+.uni-uranus:before {
+    content: '\2645'
+}
+
+.uni-neptune:before {
+    content: '\2646'
+}
+
+.uni-pluto:before {
+    content: '\2647'
+}
+
+/**
+ * Zodiac Signs
+ */
+
+.uni-aries:before {
+    content: '\2648'
+}
+
+.uni-taurus:before {
+    content: '\2649'
+}
+
+.uni-gemini:before {
+    content: '\264A'
+}
+
+.uni-cancer:before {
+    content: '\264B'
+}
+
+.uni-leo:before {
+    content: '\264C'
+}
+
+.uni-virgo:before {
+    content: '\264D'
+}
+
+.uni-libra:before {
+    content: '\264E'
+}
+
+.uni-scorpio:before {
+    content: '\264F'
+}
+
+.uni-saggitarius:before {
+    content: '\2650'
+}
+
+.uni-capricorn:before {
+    content: '\2651'
+}
+
+.uni-aquarius:before {
+    content: '\2652'
+}
+
+.uni-pisces:before {
+    content: '\2653'
+}
+
+/**
+ * Roman numerals
+ */
+.uni-roman-1:before {
+    content: '\2160';
+}
+
+.uni-roman-2:before {
+    content: '\2161';
+}
+
+.uni-roman-3:before {
+    content: '\2162';
+}
+
+.uni-roman-4:before {
+    content: '\2163';
+}
+
+.uni-roman-5:before {
+    content: '\2164';
+}
+
+.uni-roman-6:before {
+    content: '\2165';
+}
+
+.uni-roman-7:before {
+    content: '\2166';
+}
+
+.uni-roman-8:before {
+    content: '\2167';
+}
+
+.uni-roman-9:before {
+    content: '\2168';
+}
+
+.uni-roman-10:before {
+    content: '\2169';
+}
+
+.uni-roman-11:before {
+    content: '\216A';
+}
+
+.uni-roman-12:before {
+    content: '\216B';
+}
+
+.uni-roman-50:before {
+    content: '\216C';
+}
+
+.uni-roman-100:before {
+    content: '\216D';
+}
+
+.uni-roman-500:before {
+    content: '\216E';
+}
+
+.uni-roman-1000:before {
+    content: '\216F';
+}
+
+.uni-roman-1-sm:before {
+    content: '\2170';
+}
+
+.uni-roman-2-sm:before {
+    content: '\2171';
+}
+
+.uni-roman-3-sm:before {
+    content: '\2172';
+}
+
+.uni-roman-4-sm:before {
+    content: '\2173';
+}
+
+.uni-roman-5-sm:before {
+    content: '\2174';
+}
+
+.uni-roman-6-sm:before {
+    content: '\2175';
+}
+
+.uni-roman-7-sm:before {
+    content: '\2176';
+}
+
+.uni-roman-8-sm:before {
+    content: '\2177';
+}
+
+.uni-roman-9-sm:before {
+    content: '\2178';
+}
+
+.uni-roman-10-sm:before {
+    content: '\2179';
+}
+
+.uni-roman-11-sm:before {
+    content: '\217A';
+}
+
+.uni-roman-12-sm:before {
+    content: '\217B';
+}
+
+.uni-roman-50-sm:before {
+    content: '\217C';
+}
+
+.uni-roman-100-sm:before {
+    content: '\217D';
+}
+
+.uni-roman-500-sm:before {
+    content: '\217E';
+}
+
+.uni-roman-1000-sm:before {
+    content: '\217F';
 }
