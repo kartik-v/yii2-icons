@@ -16,11 +16,13 @@ use yii\base\InvalidConfigException;
  * Icon is a class for setting up icon frameworks to work with Yii in an easy way
  * To setup a global default icon framework, you can set the Yii param 'icon-framework'
  * to one of the following values in your config file:
+ * - 'bsg' for Bootstrap Glyphicons
  * - 'fa' for Font Awesome Icons
  * - 'el' for Elusive Font Icons
  * - 'typ' for Typicon Font Icons
  * - 'whhg' for Web Hosting Hub Glyphs Icons
  * - 'jui' for JQuery UI Icons
+ * - 'uni' for Unicode Icons
  *
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  */
@@ -35,21 +37,25 @@ class Icon
     /**
      * Icon framework constants
      */
+    const BSG = 'bsg';
     const FA = 'fa';
     const EL = 'el';
     const TYP = 'typ';
     const WHHG = 'whhg';
     const JUI = 'jui';
+    const UNI = 'uni';
 
     /**
      * Icon framework configurations
      */
     private static $_frameworks = [
+        self::BSG => ['prefix' => 'glyphicon glyphicon-', 'class' => '\\yii\\bootstrap\\BootstrapAsset'],
         self::FA => ['prefix' => 'fa fa-', 'class' => 'FontAwesomeAsset'],
         self::EL => ['prefix' => 'el-icon-', 'class' => 'ElusiveAsset'],
         self::TYP => ['prefix' => 'typcn typcn-', 'class' => 'TypiconsAsset'],
         self::WHHG => ['prefix' => 'icon-', 'class' => 'WhhgAsset'],
-        self::JUI => ['prefix' => 'ui-icon ui-icon-', 'class' => '\\yii\\jui\\ThemeAsset']
+        self::JUI => ['prefix' => 'ui-icon ui-icon-', 'class' => '\\yii\\jui\\ThemeAsset'],
+        self::UNI => ['prefix' => 'icon-', 'class' => 'UniAsset']
     ];
 
     /**
