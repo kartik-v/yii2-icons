@@ -20,7 +20,7 @@ class UniAsset extends \kartik\widgets\AssetBundle
     public function init()
     {
         $this->setSourcePath(__DIR__ . '/../lib/uni');
-        $this->setupAssets('css', ['css/kv-unicode']);
+        $this->setupAssets('css', ['css/kv-unicode-icons']);
         parent::init();
     }
 

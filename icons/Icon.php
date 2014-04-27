@@ -55,7 +55,7 @@ class Icon
         self::TYP => ['prefix' => 'typcn typcn-', 'class' => 'TypiconsAsset'],
         self::WHHG => ['prefix' => 'icon-', 'class' => 'WhhgAsset'],
         self::JUI => ['prefix' => 'ui-icon ui-icon-', 'class' => '\\yii\\jui\\ThemeAsset'],
-        self::UNI => ['prefix' => 'icon-', 'class' => 'UniAsset']
+        self::UNI => ['prefix' => 'uni uni-', 'class' => 'UniAsset']
     ];
 
     /**
