@@ -96,6 +96,7 @@ class Icon
         if (substr($class, 0, 1) != '\\') {
             $class = self::NS . $class;
         }
+
         $class::register($view);
     }
 
