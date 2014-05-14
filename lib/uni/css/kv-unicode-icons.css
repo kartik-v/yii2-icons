@@ -261,8 +261,112 @@
     content: '\2199';
 }
 
-.uni-arrow-double-l:before {
-    content: '\2190';
+.uni-arrow-stroke-l:before {
+    content: '\219A';
+}
+
+.uni-arrow-stroke-r:before {
+    content: '\219B';
+}
+
+.uni-arrow-stroke-lr:before {
+    content: '\21AE';
+}
+
+.uni-arrow-wave-l:before {
+    content: '\219C';
+}
+
+.uni-arrow-wave-r:before {
+    content: '\219D';
+}
+
+.uni-arrow-wave-lr:before {
+    content: '\21AD';
+}
+
+.uni-arrow-2head-l:before {
+    content: '\219E';
+}
+
+.uni-arrow-2head-u:before {
+    content: '\219F';
+}
+
+.uni-arrow-2head-r:before {
+    content: '\21A0';
+}
+
+.uni-arrow-2head-d:before {
+    content: '\21A1';
+}
+
+.uni-arrow-tail-l:before {
+    content: '\21A2';
+}
+
+.uni-arrow-tail-r:before {
+    content: '\21A3';
+}
+
+.uni-arrow-bar-l:before {
+    content: '\21A4';
+}
+
+.uni-arrow-bar-u:before {
+    content: '\21A5';
+}
+
+.uni-arrow-bar-r:before {
+    content: '\21A6';
+}
+
+.uni-arrow-bar-d:before {
+    content: '\21A7';
+}
+
+.uni-arrow-hook-l:before {
+    content: '\21A9';
+}
+
+.uni-arrow-hook-r:before {
+    content: '\21AA';
+}
+
+.uni-arrow-loop-l:before {
+    content: '\21AB';
+}
+
+.uni-arrow-loop-r:before {
+    content: '\21AC';
+}
+
+.uni-arrow-zigzag-d:before {
+    content: '\21AF';
+}
+
+.uni-arrow-ul:before {
+    content: '\21B0';
+}
+
+.uni-arrow-ur:before {
+    content: '\21B1';
+}
+
+.uni-arrow-dl:before {
+    content: '\21B2';
+}
+
+.uni-arrow-dr:before {
+    content: '\21B3';
+}
+
+.uni-arrow-rd:before {
+    content: '\21B4';
+}
+
+.uni-arrow-ld:before {
+    content: '\21B5';
 }
 
 .uni-arrow-double-u:before {
@@ -301,6 +405,54 @@
     content: '\21D9';
 }
 
+.uni-arrow-triple-l:before {
+    content: '\21DA';
+}
+
+.uni-arrow-triple-r:before {
+    content: '\21DB';
+}
+
+.uni-arrow-squiggle-l:before {
+    content: '\21DC';
+}
+
+.uni-arrow-squiggle-r:before {
+    content: '\21DD';
+}
+
+.uni-arrow-double-stroke-u:before {
+    content: '\21DE';
+}
+
+.uni-arrow-double-stroke-d:before {
+    content: '\21DF';
+}
+
+.uni-arrow-dashed-l:before {
+    content: '\21E0';
+}
+
+.uni-arrow-dashed-u:before {
+    content: '\21E1';
+}
+
+.uni-arrow-dashed-r:before {
+    content: '\21E2';
+}
+
+.uni-arrow-dashed-d:before {
+    content: '\21E3';
+}
+
+.uni-arrow-tobar-l:before {
+    content: '\21E4';
+}
+
+.uni-arrow-tobar-r:before {
+    content: '\21E5';
+}
+
 .uni-arrow-l-white:before {
     content: '\21E6';
 }
@@ -317,20 +469,80 @@
     content: '\21E9';
 }
 
-.uni-triangle-up:before {
+.uni-arrow-curved-dr:before {
+    content: '\27A5';
+}
+
+.uni-arrow-curved-ur:before {
+    content: '\27A6';
+}
+
+.uni-arrow-notched-r:before {
+    content: '\27B1';
+}
+
+.uni-arrow-circle-r:before {
+    content: '\27B2';
+}
+
+.uni-arrow-feather-r-alt:before {
+    content: '\27B3';
+}
+
+.uni-arrow-feather-r:before {
+    content: '\27B5';
+}
+
+.uni-arrow-feather-se:before {
+    content: '\27B4';
+}
+
+.uni-arrow-feather-ne:before {
+    content: '\27B6';
+}
+
+.uni-triangle-u:before {
     content: '\25B2';
 }
 
-.uni-triangle-right:before {
+.uni-triangle-r:before {
     content: '\25B6';
 }
 
-.uni-triangle-left:before {
+.uni-triangle-l:before {
     content: '\25C0';
 }
 
-.uni-triangle-down:before {
+.uni-triangle-d:before {
     content: '\25BC';
+}
+
+.uni-triangle-u-alt:before  {
+    content: '\25B3';
+}
+
+.uni-triangle-d-alt:before  {
+    content: '\25BD';
+}
+
+.uni-triangle-90:before  {
+    content: '\22BF';
+}
+
+.uni-rhombus:before  {
+    content: '\2662';
+}
+
+.uni-angle:before  {
+    content: '\2220';
+}
+
+.uni-angle-msd:before  {
+    content: '\2221';
+}
+
+.uni-angle-sph:before  {
+    content: '\2222';
 }
 
 .uni-square:before {
@@ -395,6 +607,73 @@
 
 .uni-rectangle-v:before {
     content: '\25AF';
+}
+
+.uni-parallelogram:before {
+    content: '\25B0';
+}
+
+.uni-parallelogram-alt:before {
+    content: '\25B1';
+}
+
+/**
+ * Circles
+ */
+.uni-circle:before {
+    content: '\25CB';
+}
+
+.uni-circle-dotted:before {
+    content: '\25CC';
+}
+
+.uni-circle-vfill:before {
+    content: '\25CD';
+}
+
+.uni-circle-bulleye:before {
+    content: '\25CE';
+}
+
+.uni-circle-alt:before {
+    content: '\25CF';
+}
+
+.uni-circle-lfill:before {
+    content: '\25D0';
+}
+
+.uni-circle-rfill:before {
+    content: '\25D1';
+}
+
+.uni-circle-bfill:before {
+    content: '\25D2';
+}
+
+.uni-circle-ufill:before {
+    content: '\25D3';
+}
+
+.uni-quadrant:before {
+    content: '\25D4';
+}
+
+.uni-quadrant-alt:before {
+    content: '\25D5';
+}
+
+.uni-semi-circle-left:before {
+    content: '\25D6';
+}
+
+.uni-semi-circle-right:before {
+    content: '\25D7';
+}
+
+.uni-circle-large:before {
+    content: '\25EF';
 }
 
 /**
@@ -857,97 +1136,6 @@
 
 .uni-cross-maltese:before {
     content: '\2720';
-}
-
-/**
- * Geometry
- */
-.uni-triangle-eq:before  {
-    content: '\25B3';
-}
-
-.uni-triangle-rt:before  {
-    content: '\22BF';
-}
-
-.uni-rhombus:before  {
-    content: '\2662';
-}
-
-.uni-rectangle:before  {
-    content: '\25AD';
-}
-
-.uni-angle:before  {
-    content: '\2220';
-}
-
-.uni-angle-msd:before  {
-    content: '\2221';
-}
-
-.uni-angle-sph:before  {
-    content: '\2222';
-}
-
-
-/**
- * Circles
- */
-.uni-circle:before {
-    content: '\25CB';
-}
-
-.uni-circle-dotted:before {
-    content: '\25CC';
-}
-
-.uni-circle-vfill:before {
-    content: '\25CD';
-}
-
-.uni-circle-bulleye:before {
-    content: '\25CE';
-}
-
-.uni-circle-alt:before {
-    content: '\25CF';
-}
-
-.uni-circle-lfill:before {
-    content: '\25D0';
-}
-
-.uni-circle-rfill:before {
-    content: '\25D1';
-}
-
-.uni-circle-bfill:before {
-    content: '\25D2';
-}
-
-.uni-circle-ufill:before {
-    content: '\25D3';
-}
-
-.uni-quadrant:before {
-    content: '\25D4';
-}
-
-.uni-quadrant-alt:before {
-    content: '\25D5';
-}
-
-.uni-semi-circle-left:before {
-    content: '\25D6';
-}
-
-.uni-semi-circle-right:before {
-    content: '\25D7';
-}
-
-.uni-circle-large:before {
-    content: '\25EF';
 }
 
 /**
