@@ -660,10 +660,6 @@
     content: '\23F0';
 }
 
-.uni-hourglass-alt:before {
-    content: '\23F3';
-}
-
 /**
  * Miscellaneous symbols
  */
@@ -862,6 +858,38 @@
 .uni-cross-maltese:before {
     content: '\2720';
 }
+
+/**
+ * Geometry
+ */
+.uni-triangle-eq:before  {
+    content: '\25B3';
+}
+
+.uni-triangle-rt:before  {
+    content: '\22BF';
+}
+
+.uni-rhombus:before  {
+    content: '\2662';
+}
+
+.uni-rectangle:before  {
+    content: '\25AD';
+}
+
+.uni-angle:before  {
+    content: '\2220';
+}
+
+.uni-angle-msd:before  {
+    content: '\2221';
+}
+
+.uni-angle-sph:before  {
+    content: '\2222';
+}
+
 
 /**
  * Circles
