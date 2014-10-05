@@ -9,18 +9,18 @@
 namespace kartik\icons;
 
 /**
- * Asset bundle for Web Hosting Hub Glyphs
+ * Asset bundle for Typicons icon set
  *
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  * @since 1.0
  */
-class WhhgAsset extends \kartik\widgets\AssetBundle
+class TypiconsAsset extends \kartik\widgets\AssetBundle
 {
 
     public function init()
     {
-        $this->setSourcePath(__DIR__ . '/../lib/whhg');
-        $this->setupAssets('css', ['css/whhg']);
+        $this->setSourcePath(__DIR__ . '/lib/typicons');
+        $this->setupAssets('css', ['css/typicons']);
         parent::init();
     }
 

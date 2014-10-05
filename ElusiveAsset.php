@@ -19,7 +19,7 @@ class ElusiveAsset extends \kartik\widgets\AssetBundle
 
     public function init()
     {
-        $this->setSourcePath(__DIR__ . '/../lib/elusive');
+        $this->setSourcePath(__DIR__ . '/lib/elusive');
         $this->setupAssets('css', ['css/elusive-webfont']);
         parent::init();
     }
