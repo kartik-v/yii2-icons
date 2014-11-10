@@ -12,7 +12,7 @@
             "homepage": "http://demos.krajee.com/"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "yiisoft/yii2-jui": "*",
         "fortawesome/font-awesome": "*",
