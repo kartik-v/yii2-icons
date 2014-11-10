@@ -12,10 +12,11 @@
             "homepage": "http://demos.krajee.com/"
         }
     ],
+    "minimum-stability": "stable",
     "require": {
         "yiisoft/yii2-jui": "*",
         "fortawesome/font-awesome": "*",
-        "kartik-v/yii2-widgets": "*"
+        "kartik-v/yii2-krajee-base": "*"
     },
     "autoload": {
         "psr-4": {
