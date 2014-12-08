@@ -1,3 +1,9 @@
+version 1.2.0
+=============
+**Date:** 08-Nov-2014
+
+- (enh #6): Create a new JUI asset for core yii\jui package change.
+
 version 1.1.0
 =============
 **Date:** 10-Nov-2014
