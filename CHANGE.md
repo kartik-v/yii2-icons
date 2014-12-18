@@ -1,3 +1,9 @@
+version 1.3.0
+=============
+**Date:** 18-Dec-2014
+
+- (enh #10): Add `showStack` method for displaying stacked icons like in FA
+
 version 1.2.0
 =============
 **Date:** 08-Dec-2014
