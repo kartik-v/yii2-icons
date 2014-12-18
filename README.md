@@ -94,6 +94,19 @@ echo \yii\bootstrap\Nav::widget([
 // Your other code
 ```
 
+### Displaying Stacked Icons
+You can also display stacked icons for frameworks like Font Awesome, where this is supported. For example:
+
+```php
+use kartik\icons\Icon;
+// fa-twitter on fa-square-o
+Icon::showStack('square-o', 'twitter', ['class'=>'fa-lg']);
+
+// fa-flag on fa-circle
+Icon::showStack('circle', 'flag', ['class'=>'fa-lg'], ['class'=>'fa-inverse']);
+```
+
+
 ## License
 
 **yii2-icons** is released under the BSD 3-Clause License. See the bundled `LICENSE.md` for details.
