@@ -3,7 +3,7 @@
 /**
  * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014
  * @package yii2-icons
- * @version 1.3.0
+ * @version 1.3.1
  */
 
 namespace kartik\icons;
@@ -23,7 +23,7 @@ use yii\base\InvalidConfigException;
  * - 'whhg' for Web Hosting Hub Glyphs Icons
  * - 'jui' for JQuery UI Icons
  * - 'uni' for Unicode Icons
- * - 'si' for Socicon Icons * - 'si' for Socicon Icons
+ * - 'si' for Socicon Icons
  *
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  */

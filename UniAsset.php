@@ -3,7 +3,7 @@
 /**
  * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014
  * @package yii2-icons
- * @version 1.3.0
+ * @version 1.4.0
  */
 
 namespace kartik\icons;
@@ -16,12 +16,13 @@ namespace kartik\icons;
  */
 class UniAsset extends \kartik\base\AssetBundle
 {
-
+    /**
+     * @inheritdoc
+     */
     public function init()
     {
         $this->setSourcePath(__DIR__ . '/lib/uni');
         $this->setupAssets('css', ['css/kv-unicode-icons']);
         parent::init();
     }
-
 }

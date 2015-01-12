@@ -1,3 +1,9 @@
+version 1.4.0
+=============
+**Date:** 12-Jan-2015
+
+- (enh #13): Add Socicon Icons
+
 version 1.3.0
 =============
 **Date:** 18-Dec-2014

@@ -9,7 +9,8 @@ This extension offers an easy method to setup various icon frameworks to work wi
 3. [Typicons](http://typicons.com/)
 4. [Web Hosting Hub Glyphs](http://www.webhostinghub.com/glyphs/)
 5. [JQuery UI Icons](http://api.jqueryui.com/theming/icons/)
-6. [Unicode Icons](http://demos.krajee.com/uni-icons/) A collection of unicode symbols made available as CSS icons by Krajee
+6. [Socicon Icons](http://www.socicon.com/)
+7. [Unicode Icons](http://demos.krajee.com/uni-icons/) A collection of unicode symbols made available as CSS icons by Krajee
 
 ### Demo
 You can see a [demonstration here](http://demos.krajee.com/icons) on usage of this extension with documentation and examples.
