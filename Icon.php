@@ -23,6 +23,7 @@ use yii\base\InvalidConfigException;
  * - 'whhg' for Web Hosting Hub Glyphs Icons
  * - 'jui' for JQuery UI Icons
  * - 'uni' for Unicode Icons
+ * - 'si' for Socicon Icons * - 'si' for Socicon Icons
  *
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  */
@@ -44,7 +45,8 @@ class Icon
     const WHHG = 'whhg';
     const JUI = 'jui';
     const UNI = 'uni';
-
+    const SI = 'si';
+    
     /**
      * Icon framework configurations
      */
@@ -55,7 +57,8 @@ class Icon
         self::TYP => ['prefix' => 'typcn typcn-', 'class' => 'TypiconsAsset'],
         self::WHHG => ['prefix' => 'icon-', 'class' => 'WhhgAsset'],
         self::JUI => ['prefix' => 'ui-icon ui-icon-', 'class' => 'JuiAsset'],
-        self::UNI => ['prefix' => 'uni uni-', 'class' => 'UniAsset']
+        self::UNI => ['prefix' => 'uni uni-', 'class' => 'UniAsset'],
+        self::SI => ['prefix' => 'socicon socicon-', 'class' => 'SociconAsset'],
     ];
 
     /**
