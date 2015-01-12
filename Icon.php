@@ -3,7 +3,7 @@
 /**
  * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014
  * @package yii2-icons
- * @version 1.3.0
+ * @version 1.1.0
  */
 
 namespace kartik\icons;
@@ -23,6 +23,7 @@ use yii\base\InvalidConfigException;
  * - 'whhg' for Web Hosting Hub Glyphs Icons
  * - 'jui' for JQuery UI Icons
  * - 'uni' for Unicode Icons
+ * - 'si' for Socicon Icons
  *
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  */
@@ -44,6 +45,7 @@ class Icon
     const WHHG = 'whhg';
     const JUI = 'jui';
     const UNI = 'uni';
+    const SI = 'si';
 
     /**
      * Icon framework configurations
@@ -54,8 +56,9 @@ class Icon
         self::EL => ['prefix' => 'el-icon-', 'class' => 'ElusiveAsset'],
         self::TYP => ['prefix' => 'typcn typcn-', 'class' => 'TypiconsAsset'],
         self::WHHG => ['prefix' => 'icon-', 'class' => 'WhhgAsset'],
-        self::JUI => ['prefix' => 'ui-icon ui-icon-', 'class' => 'JuiAsset'],
-        self::UNI => ['prefix' => 'uni uni-', 'class' => 'UniAsset']
+        self::JUI => ['prefix' => 'ui-icon ui-icon-', 'class' => '\\yii\\jui\\ThemeAsset'],
+        self::UNI => ['prefix' => 'uni uni-', 'class' => 'UniAsset'],
+        self::SI => ['prefix' => 'socicon socicon-', 'class' => 'SociconAsset'],
     ];
 
     /**
@@ -99,58 +102,25 @@ class Icon
 
         $class::register($view);
     }
-    
+
     /**
      * Displays an icon for a specific framework.
      *
      * @param string $name the icon name
-     * @param array $options the HTML attributes for the icon
-     * @param string $framework the icon framework name. If not passed will default to the
-     * `icon-framework` param set in Yii Configuration file. Will throw an InvalidConfigException
-     * if neither of the two is available.
-     * @param boolean $space whether to place a space after the icon, defaults to true
-     * @param string $tag the HTML tag to wrap the icon (defaults to `i`)
-     * @return string the HTML formatted icon
-     */
-    public static function show($name, $options = [], $framework = null, $space = true, $tag = 'i')
-    {
-        $key = static::getFramework($framework);
-        $class = self::$_frameworks[$key]['prefix'] . $name;
-        Html::addCssClass($options, $class);
-        return Html::tag($tag, '', $options) . ($space ? ' ' : '');
-    }
-    
-    /**
-     * Displays an icon stack as supported by frameworks like Font Awesome
-     * @see http://fontawesome.io/examples/#stacked
-     *
-     * @param string $name2 the icon name in stack 2x
-     * @param string $name1 the icon name in stack 1x
-     * @param array $options the HTML attributes for the icon stack container
-     * @param array $options2 the HTML attributes for the icon in stack 1x
-     * @param array $options1 the HTML attributes for the icon in stack 2x
-     * @param boolean $invert whether to invert the order of stack 2x and 1x and place stack-1x 
-     * before stack-2x. Defaults to `false`.
+     * @param array $options the icon options
      * @param string $framework the icon framework name. If not passed will default to the
      * `icon-framework` param set in Yii Configuration file. Will throw an InvalidConfigException
      * if neither of the two is available.
      * @param boolean $space whether to place a space after the icon, defaults to true
      * @param string $tag the html tag to wrap the icon (defaults to 'i')
-     * @param string $stackTag the html tag to wrap the stack container (defaults to `span`)
-     * @param string $stackPrefix the CSS prefix string for the stack container (defaults to `fa-stack`)
      * @return string the html formatted icon
      */
-    public static function showStack($name1, $name2, $options = [], $options1 = [], $options2 = [],  
-        $invert = false, $framework = null, $space = true, $tag = 'i', $stackTag = 'span', $stackPrefix = 'fa-stack')
+    public static function show($name, $options = [], $framework = null, $space = true, $tag = 'i')
     {
         $key = static::getFramework($framework);
-        Html::addCssClass($options1, $stackPrefix . '-1x');
-        Html::addCssClass($options2, $stackPrefix . '-2x');
-        Html::addCssClass($options, $stackPrefix);
-        $icon1 = static::show($name1, $options1, $framework, $space, $tag);
-        $icon2 = static::show($name2, $options2, $framework, $space, $tag);
-        $icon = $invert ? $icon1 . "\n" . $icon2 : $icon2 . "\n" . $icon1;
-        return Html::tag($stackTag, $icon, $options) . ($space ? ' ' : '');
+        $class = self::$_frameworks[$key]['prefix'] . $name;
+        $options['class'] = empty($options['class']) ? $class : $class . ' ' . $options['class'];
+        return Html::tag($tag, '', $options) . ($space ? ' ' : '');
     }
 
 }
