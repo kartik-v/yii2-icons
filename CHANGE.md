@@ -3,6 +3,7 @@ version 1.4.0
 **Date:** 12-Jan-2015
 
 - (enh #13): Add Socicon Icons
+- (enh #15): Add [Octicons](https://octicons.github.com/)
 
 version 1.3.0
 =============
