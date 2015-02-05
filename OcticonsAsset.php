@@ -22,7 +22,7 @@ class OcticonsAsset extends \kartik\base\AssetBundle
     public function init()
     {
         $this->setSourcePath(__DIR__ . '/lib/octicons');
-        $this->setupAssets('css', ['css/octicons']);
+        $this->setupAssets('css', ['octicons']);
         parent::init();
     }
 

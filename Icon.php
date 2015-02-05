@@ -23,6 +23,7 @@ use yii\base\InvalidConfigException;
  * - 'whhg' for Web Hosting Hub Glyphs Icons
  * - 'jui' for JQuery UI Icons
  * - 'uni' for Unicode Icons
+ * - 'oct' for Github Octicons
  * - 'si' for Socicon Icons
  *
  * @author Kartik Visweswaran <kartikv2@gmail.com>
@@ -60,7 +61,7 @@ class Icon
         self::JUI => ['prefix' => 'ui-icon ui-icon-', 'class' => 'JuiAsset'],
         self::UNI => ['prefix' => 'uni uni-', 'class' => 'UniAsset'],
         self::SI => ['prefix' => 'socicon socicon-', 'class' => 'SociconAsset'],
-        self::OCT => ['prefix' => 'octicon', 'class' => 'OcticonsAsset'],
+        self::OCT => ['prefix' => 'octicon octicon-', 'class' => 'OcticonsAsset'],
     ];
 
     /**
