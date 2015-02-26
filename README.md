@@ -1,6 +1,12 @@
 yii2-icons
 ==========
 
+[![Latest Stable Version](https://poser.pugx.org/kartik-v/yii2-icons/v/stable.svg)](https://packagist.org/packages/kartik-v/yii2-icons)
+[![License](https://poser.pugx.org/kartik-v/yii2-icons/license.svg)](https://packagist.org/packages/kartik-v/yii2-icons)
+[![Total Downloads](https://poser.pugx.org/kartik-v/yii2-icons/downloads.svg)](https://packagist.org/packages/kartik-v/yii2-icons)
+[![Monthly Downloads](https://poser.pugx.org/kartik-v/yii2-icons/d/monthly.png)](https://packagist.org/packages/kartik-v/yii2-icons)
+[![Daily Downloads](https://poser.pugx.org/kartik-v/yii2-icons/d/daily.png)](https://packagist.org/packages/kartik-v/yii2-icons)
+
 This extension offers an easy method to setup various icon frameworks to work with Yii Framework 2.0. Most popular and free icon frameworks available are currently supported. This list may be extended in future based on demand and feedback.
 
 1. [Bootstrap Glyphicons](http://getbootstrap.com/components/#glyphicons)
