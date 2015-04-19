@@ -11,7 +11,7 @@ namespace kartik\icons;
 /**
  * Asset bundle for FlagIcon icon set
  *
- * @author Davidson Alencar <kartikv2@gmail.com>
+ * @author Davidson Alencar <davidson.t.i@gmail.com>
  * @since 1.4
  */
 class FlagIconAsset extends \kartik\base\AssetBundle
