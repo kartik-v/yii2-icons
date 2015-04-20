@@ -1,9 +1,10 @@
 version 1.4.0
 =============
-**Date:** 04-Feb-2015
+**Date:** 20-Apr-2015
 
-- (enh #13): Add Socicon Icons
+- (enh #13): Add [Socicon Icons](http://www.socicon.com/)
 - (enh #15): Add [Octicons](https://octicons.github.com/)
+- (enh #16): Add [Flag Icons](http://lipis.github.io/flag-icon-css/)
 
 version 1.3.0
 =============

@@ -15,8 +15,8 @@
     "minimum-stability": "stable",
     "require": {
         "yiisoft/yii2-jui": "*",
-        "fortawesome/font-awesome": "*",
         "kartik-v/yii2-krajee-base": "*",
+        "fortawesome/font-awesome": "*",
         "components/flag-icon-css": "*"
     },
     "autoload": {

@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2015
  * @package yii2-icons
  * @version 1.4.0
  */
@@ -8,7 +8,9 @@
 namespace kartik\icons;
 
 /**
- * Asset bundle for Socicon icon set
+ * Asset bundle for Octicons icon set. Uses client assets
+ * (CSS, images, and fonts) from Github Icons repository.
+ * @see https://octicons.github.com/
  *
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  * @since 1.0
