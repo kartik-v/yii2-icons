@@ -25,6 +25,7 @@ use yii\base\InvalidConfigException;
  * - 'uni' for Unicode Icons
  * - 'oct' for Github Octicons
  * - 'si' for Socicon Icons
+ * - 'fi' for FlagIcon Icons
  *
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  */
@@ -48,6 +49,7 @@ class Icon
     const UNI = 'uni';
     const SI = 'si';
     const OCT = 'oct';
+    const FI = 'fi';
 
     /**
      * Icon framework configurations
@@ -62,6 +64,7 @@ class Icon
         self::UNI => ['prefix' => 'uni uni-', 'class' => 'UniAsset'],
         self::SI => ['prefix' => 'socicon socicon-', 'class' => 'SociconAsset'],
         self::OCT => ['prefix' => 'octicon octicon-', 'class' => 'OcticonsAsset'],
+        self::FI => ['prefix' => 'flag-icon flag-icon-', 'class' => 'FlagIconAsset'],
     ];
 
     /**

@@ -16,7 +16,8 @@
     "require": {
         "yiisoft/yii2-jui": "*",
         "fortawesome/font-awesome": "*",
-        "kartik-v/yii2-krajee-base": "*"
+        "kartik-v/yii2-krajee-base": "*",
+        "components/flag-icon-css": "*"
     },
     "autoload": {
         "psr-4": {
