@@ -124,11 +124,12 @@ Icon::addFramework('custom', [
     'class'=>'\common\icons\CustomIconAsset',
     'prefix'=>'glyphicon custom-',
 ]);
+
 // map to view file
 Icon::map($this,'custom');
 
 // show the icon
-Icon::show('menu',[],'custom');
+echo Icon::show('menu',[],'custom');
 ```
 
 ```php
