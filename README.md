@@ -122,7 +122,7 @@ use kartik\icons\Icon;
 // add framework
 Icon::addFramework('custom', [
     'class'=>'\common\icons\CustomIconAsset',
-    'prefix'=>'glyphicon custom-',
+    'prefix'=>'custom-icon',
 ]);
 
 // map to view file
