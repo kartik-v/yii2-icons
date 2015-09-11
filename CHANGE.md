@@ -1,3 +1,10 @@
+version 1.4.1
+=============
+**Date:** 12-Sep-2015
+
+- (enh #17): Added method `getFrameworkPrefix`.
+- (enh #19): Update to add custom icon sets.
+
 version 1.4.0
 =============
 **Date:** 20-Apr-2015

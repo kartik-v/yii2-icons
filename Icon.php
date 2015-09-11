@@ -3,7 +3,7 @@
 /**
  * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2015
  * @package yii2-icons
- * @version 1.4.0
+ * @version 1.4.1
  */
 
 namespace kartik\icons;
@@ -66,22 +66,24 @@ class Icon
         self::OCT => ['prefix' => 'octicon octicon-', 'class' => 'OcticonsAsset'],
         self::FI => ['prefix' => 'flag-icon flag-icon-', 'class' => 'FlagIconAsset'],
     ];
-    
+
     /**
      * Add a custom icon set to the icon frameworks
-     * 
+     *
      * @param string $key the key used to identify the icon set
-     * @param type $config the icon configuration
+     * @param array   $config the icon configuration
      */
-    public static function addFramework($key,$config)
+    public static function addFramework($key, $config)
     {
         self::$_frameworks[$key] = $config;
     }
 
     /**
-     * Returns the font framework setup from Yii parameters.
+     * Returns the key for css framework set (or parses framework setup in Yii parameters)
      *
-     * @var string the framework to be used with the application
+     * @var string $framework the framework to be used with the application
+     * @var string $method the method in the Icon class (defaults to `show`)
+     * @returns string the icon framework key
      * @throws InvalidConfigException
      */
     protected static function getFramework($framework = null, $method = 'show')
@@ -100,6 +102,19 @@ class Icon
             throw new InvalidConfigException(self::PARAM_INVALID);
         }
         return Yii::$app->params['icon-framework'];
+    }
+
+    /**
+     * Returns the prefix for the css framework set (or parses framework setup in Yii parameters)
+     *
+     * @var string the framework to be used with the application
+     * @var string $method the method in the Icon class (defaults to `show`)
+     * @returns string the icon framework key
+     */
+    public static function getFrameworkPrefix($framework = null, $method = 'show')
+    {
+        $key = static::getFramework($framework, $method);
+        return self::$_frameworks[$key]['prefix'];
     }
 
     /**
@@ -135,8 +150,7 @@ class Icon
      */
     public static function show($name, $options = [], $framework = null, $space = true, $tag = 'i')
     {
-        $key = static::getFramework($framework);
-        $class = self::$_frameworks[$key]['prefix'] . $name;
+        $class = self::getFrameworkPrefix($framework) . $name;
         Html::addCssClass($options, $class);
         return Html::tag($tag, '', $options) . ($space ? ' ' : '');
     }
@@ -176,7 +190,6 @@ class Icon
         $stackTag = 'span',
         $stackPrefix = 'fa-stack'
     ) {
-        $key = static::getFramework($framework);
         Html::addCssClass($options1, $stackPrefix . '-1x');
         Html::addCssClass($options2, $stackPrefix . '-2x');
         Html::addCssClass($options, $stackPrefix);
