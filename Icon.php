@@ -66,6 +66,17 @@ class Icon
         self::OCT => ['prefix' => 'octicon octicon-', 'class' => 'OcticonsAsset'],
         self::FI => ['prefix' => 'flag-icon flag-icon-', 'class' => 'FlagIconAsset'],
     ];
+    
+    /**
+     * Add a custom icon set to the icon frameworks
+     * 
+     * @param string $key the key used to identify the icon set
+     * @param type $config the icon configuration
+     */
+    public static function addFramework($key,$config)
+    {
+        self::$_frameworks[$key] = $config;
+    }
 
     /**
      * Returns the font framework setup from Yii parameters.

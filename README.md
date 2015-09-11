@@ -115,6 +115,46 @@ Icon::showStack('square-o', 'twitter', ['class'=>'fa-lg']);
 Icon::showStack('circle', 'flag', ['class'=>'fa-lg'], ['class'=>'fa-inverse']);
 ```
 
+### Add Custom Icons
+You can add custom icon sets to the list of available frameworks.
+```php
+use kartik\icons\Icon;
+// add framework
+Icon::addFramework('custom', [
+    'class'=>'\common\icons\CustomIconAsset',
+    'prefix'=>'custom-icon',
+]);
+
+// map to view file
+Icon::map($this,'custom');
+
+// show the icon
+echo Icon::show('menu',[],'custom');
+```
+
+```php
+namespace common\icons;
+class CustomIconAsset extends \yii\web\AssetBundle
+{
+    public $sourcePath = '@common/icons/assets/custom';
+    public $depends = array(
+        'yii\web\YiiAsset',
+        'yii\bootstrap\BootstrapAsset'
+    );
+    public $css=[
+        'css/animation.css',
+        'css/custom-codes.css',
+        'css/custom-embedded.css',
+        'css/custom-ie7.css',
+        'css/custom-ie7-codes.css',
+        'css/custom.css',
+    ];
+}
+```
+The above asset bundle uses files genereted by http://fontello.com/
+
+
+  
 
 ## License
 
