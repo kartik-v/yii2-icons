@@ -9,8 +9,11 @@
 namespace kartik\icons;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\base\InvalidConfigException;
+use yii\web\View;
+use kartik\base\AssetBundle;
 
 /**
  * Icon is a class for setting up icon frameworks to work with Yii in an easy way
@@ -26,6 +29,7 @@ use yii\base\InvalidConfigException;
  * - 'oct' for Github Octicons
  * - 'si' for Socicon Icons
  * - 'fi' for FlagIcon Icons
+ * - 'oi' for Open Iconic Icons
  *
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  */
@@ -50,6 +54,7 @@ class Icon
     const SI = 'si';
     const OCT = 'oct';
     const FI = 'fi';
+    const OI = 'oi';
 
     /**
      * Icon framework configurations
@@ -65,13 +70,14 @@ class Icon
         self::SI => ['prefix' => 'socicon socicon-', 'class' => 'SociconAsset'],
         self::OCT => ['prefix' => 'octicon octicon-', 'class' => 'OcticonsAsset'],
         self::FI => ['prefix' => 'flag-icon flag-icon-', 'class' => 'FlagIconAsset'],
+        self::OI => ['prefix' => 'oi oi-', 'class' => 'OpenIconicAsset'],
     ];
 
     /**
      * Add a custom icon set to the icon frameworks
      *
      * @param string $key the key used to identify the icon set
-     * @param array   $config the icon configuration
+     * @param array  $config the icon configuration
      */
     public static function addFramework($key, $config)
     {
@@ -120,7 +126,7 @@ class Icon
     /**
      * Maps the icon framework to the current view. Call this in your view or layout file.
      *
-     * @param object $view the view object
+     * @param View   $view the view object
      * @param string $framework the name of the framework, if not passed it will default to
      * the Yii config param 'icon-framework'
      */
@@ -131,20 +137,22 @@ class Icon
         if (substr($class, 0, 1) != '\\') {
             $class = self::NS . $class;
         }
-
+        /**
+         * @var AssetBundle $class
+         */
         $class::register($view);
     }
+
 
     /**
      * Displays an icon for a specific framework.
      *
      * @param string  $name the icon name
      * @param array   $options the HTML attributes for the icon
-     * @param string  $framework the icon framework name. If not passed will default to the
-     * `icon-framework` param set in Yii Configuration file. Will throw an InvalidConfigException
-     * if neither of the two is available.
+     * @param string  $framework the icon framework name. If not passed will default to the `icon-framework` param set
+     *     in Yii Configuration file. Will throw an InvalidConfigException if neither of the two is available.
      * @param boolean $space whether to place a space after the icon, defaults to true
-     * @param string  $tag the HTML tag to wrap the icon (defaults to `i`)
+     * @param string  $tag the HTML tag to wrap the icon (defaults to `i`).
      *
      * @return string the HTML formatted icon
      */
@@ -198,5 +206,5 @@ class Icon
         $icon = $invert ? $icon1 . "\n" . $icon2 : $icon2 . "\n" . $icon1;
         return Html::tag($stackTag, $icon, $options) . ($space ? ' ' : '');
     }
-
 }
+
