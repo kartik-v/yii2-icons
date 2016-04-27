@@ -7,6 +7,7 @@
  */
 
 namespace kartik\icons;
+use kartik\base\AssetBundle;
 
 /**
  * Asset bundle for FlagIcon icon set. Uses client assets
@@ -17,13 +18,9 @@ namespace kartik\icons;
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  * @since 1.4
  */
-class FlagIconAsset extends \kartik\base\AssetBundle
+class FlagIconAsset extends AssetBundle
 {
     public $sourcePath = '@vendor/components/flag-icon-css';
-    public $depends = array(
-        'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset'
-    );
 
     /**
      * @inheritdoc

@@ -7,6 +7,7 @@
  */
 
 namespace kartik\icons;
+use kartik\base\AssetBundle;
 
 /**
  * Asset bundle for FontAwesome icon set. Uses client assets
@@ -16,13 +17,9 @@ namespace kartik\icons;
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  * @since 1.0
  */
-class FontAwesomeAsset extends \kartik\base\AssetBundle
+class FontAwesomeAsset extends AssetBundle
 {
     public $sourcePath = '@vendor/fortawesome/font-awesome';
-    public $depends = array(
-        'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset'
-    );
 
     /**
      * @inheritdoc
