@@ -1,15 +1,14 @@
 <?php
 
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2015
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2017
  * @package yii2-icons
- * @version 1.4.1
+ * @version 1.4.2
  */
 
 namespace kartik\icons;
 
 use Yii;
-use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\base\InvalidConfigException;
 use yii\web\View;
@@ -19,6 +18,7 @@ use kartik\base\AssetBundle;
  * Icon is a class for setting up icon frameworks to work with Yii in an easy way
  * To setup a global default icon framework, you can set the Yii param 'icon-framework'
  * to one of the following values in your config file:
+ *
  * - 'bsg' for Bootstrap Glyphicons
  * - 'fa' for Font Awesome Icons
  * - 'el' for Elusive Font Icons
@@ -30,34 +30,76 @@ use kartik\base\AssetBundle;
  * - 'si' for Socicon Icons
  * - 'fi' for FlagIcon Icons
  * - 'oi' for Open Iconic Icons
- * - 'if' for IcoFont Icons
+ * - 'icf' for IcoFont Icons
  *
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  */
 class Icon
 {
-
-    const NS = '\\kartik\\icons\\';
-    const PARAM_NOT_SET = "The 'icon-framework' option has not been setup in Yii params. Check your configuration file.";
-    const PARAM_INVALID = "Invalid or non-recognized 'icon-framework' has been setup in Yii params. Check your configuration file.";
-    const FRAMEWORK_INVALID = "Invalid or non-existing framework '{framework}' called in your {method}() method.";
-
     /**
-     * Icon framework constants
+     * Icons Namespace
+     */
+    const NS = '\\kartik\\icons\\';
+    /**
+     * Exception message displayed when `icon-framework` has not been setup in Yii2 Params Configuration file.
+     */
+    const PARAM_NOT_SET = "The 'icon-framework' option has not been setup in Yii params. Check your configuration file.";
+    /**
+     * Exception message displayed when `icon-framework` has an invalid configuration in Yii2 Params Configuration file.
+     */
+    const PARAM_INVALID = "Invalid or non-recognized 'icon-framework' has been setup in Yii params. Check your configuration file.";
+    /**
+     * Exception message displayed when an invalid icon framework has been detected by the [[getFramework]] method.
+     */
+    const FRAMEWORK_INVALID = "Invalid or non-existing framework '{framework}' called in your {method}() method.";
+    /**
+     * Bootstrap Glyphicons
      */
     const BSG = 'bsg';
+    /**
+     * Font Awesome Icons
+     */
     const FA = 'fa';
+    /**
+     * Elusive Icons
+     */
     const EL = 'el';
+    /**
+     * TypIcon Icons
+     */
     const TYP = 'typ';
+    /**
+     * Web Hosting Hub Glyphs
+     */
     const WHHG = 'whhg';
+    /**
+     * JQuery UI Icons
+     */
     const JUI = 'jui';
+    /**
+     * Krajee Unicode Icons
+     */
     const UNI = 'uni';
+    /**
+     * SocIcon Icons
+     */
     const SI = 'si';
+    /**
+     * Github Octicons
+     */
     const OCT = 'oct';
+    /**
+     * FlagIcon Icons
+     */
     const FI = 'fi';
+    /**
+     * OpenIconic Icons
+     */
     const OI = 'oi';
-    const IF = 'if';
-
+    /**
+     * IcoFont Icons
+     */
+    const ICF = 'icf';
     /**
      * Icon framework configurations
      */
@@ -73,7 +115,7 @@ class Icon
         self::OCT => ['prefix' => 'octicon octicon-', 'class' => 'OcticonsAsset'],
         self::FI => ['prefix' => 'flag-icon flag-icon-', 'class' => 'FlagIconAsset'],
         self::OI => ['prefix' => 'oi oi-', 'class' => 'OpenIconicAsset'],
-        self::IF => ['prefix' => 'icofont icofont-', 'class' => 'IcoFontAsset'],
+        self::ICF => ['prefix' => 'icofont icofont-', 'class' => 'IcoFontAsset'],
     ];
 
     /**
@@ -146,7 +188,6 @@ class Icon
         $class::register($view);
     }
 
-
     /**
      * Displays an icon for a specific framework.
      *
@@ -176,15 +217,14 @@ class Icon
      * @param array   $options the HTML attributes for the icon stack container
      * @param array   $options2 the HTML attributes for the icon in stack 1x
      * @param array   $options1 the HTML attributes for the icon in stack 2x
-     * @param boolean $invert whether to invert the order of stack 2x and 1x and place stack-1x
-     * before stack-2x. Defaults to `false`.
-     * @param string  $framework the icon framework name. If not passed will default to the
-     * `icon-framework` param set in Yii Configuration file. Will throw an InvalidConfigException
-     * if neither of the two is available.
-     * @param boolean $space whether to place a space after the icon, defaults to true
-     * @param string  $tag the html tag to wrap the icon (defaults to 'i')
-     * @param string  $stackTag the html tag to wrap the stack container (defaults to `span`)
-     * @param string  $stackPrefix the CSS prefix string for the stack container (defaults to `fa-stack`)
+     * @param boolean $invert whether to invert the order of stack 2x and 1x and place stack-1x before stack-2x.
+     * Defaults to `false`.
+     * @param string  $framework the icon framework name. If not passed will default to the `icon-framework` param set
+     * in Yii Configuration file. Will throw an InvalidConfigException if neither of the two is available.
+     * @param boolean $space whether to place a space after the icon, defaults to `true`.
+     * @param string  $tag the html tag to wrap the icon (defaults to 'i').
+     * @param string  $stackTag the html tag to wrap the stack container (defaults to `span`).
+     * @param string  $stackPrefix the CSS prefix string for the stack container (defaults to `fa-stack`).
      *
      * @return string the html formatted icon
      */
@@ -210,4 +250,3 @@ class Icon
         return Html::tag($stackTag, $icon, $options) . ($space ? ' ' : '');
     }
 }
-

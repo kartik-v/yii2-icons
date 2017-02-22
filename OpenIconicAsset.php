@@ -1,22 +1,24 @@
 <?php
 
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2015
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2017
  * @package yii2-icons
- * @version 1.4.1
+ * @version 1.4.2
  */
 
 namespace kartik\icons;
 
+use kartik\base\BaseAssetBundle;
+
 /**
- * Asset bundle for Open Iconic icon set. Uses client assets
- * (CSS, images, and fonts) from Open Iconic repository.
+ * Asset bundle for Open Iconic icon set. Uses client assets (CSS, images, and fonts) from Open Iconic repository.
+ * 
  * @see https://github.com/iconic/open-iconic
  *
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  * @since 1.0
  */
-class OpenIconicAsset extends \kartik\base\AssetBundle
+class OpenIconicAsset extends BaseAssetBundle
 {
     /**
      * @inheritdoc

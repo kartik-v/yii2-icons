@@ -1,7 +1,13 @@
 {
     "name": "kartik-v/yii2-icons",
     "description": "Set of icon frameworks for use in Yii Framework 2.0",
-    "keywords": ["yii", "yii2", "extension", "icon", "font"],
+    "keywords": [
+        "yii",
+        "yii2",
+        "extension",
+        "icon",
+        "font"
+    ],
     "homepage": "https://github.com/kartik-v/yii2-icons",
     "type": "yii2-extension",
     "license": "BSD 3-Clause",

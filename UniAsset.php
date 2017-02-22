@@ -1,20 +1,22 @@
 <?php
 
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2015
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2017
  * @package yii2-icons
- * @version 1.4.1
+ * @version 1.4.2
  */
 
 namespace kartik\icons;
 
+use kartik\base\BaseAssetBundle;
+
 /**
- * Asset bundle for Web Hosting Hub Glyphs
+ * Asset bundle for Krajee Unicode Icons.
  *
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  * @since 1.0
  */
-class UniAsset extends \kartik\base\AssetBundle
+class UniAsset extends BaseAssetBundle
 {
     /**
      * @inheritdoc

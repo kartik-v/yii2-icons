@@ -1,25 +1,36 @@
 <?php
 
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2015
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2017
  * @package yii2-icons
- * @version 1.4.1
+ * @version 1.4.2
  */
 
 namespace kartik\icons;
-use kartik\base\AssetBundle;
+
+use kartik\base\BaseAssetBundle;
 
 /**
- * Asset bundle for FontAwesome icon set. Uses client assets
- * (CSS, images, and fonts) from font-awesome repository.
+ * Asset bundle for FontAwesome icon set. Uses client assets (CSS, images, and fonts) from font-awesome repository.
+ *
  * @see http://fortawesome.github.io/Font-Awesome/
  *
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  * @since 1.0
  */
-class FontAwesomeAsset extends AssetBundle
+class FontAwesomeAsset extends BaseAssetBundle
 {
+    /**
+     * @inheritdoc
+     */
     public $sourcePath = '@vendor/fortawesome/font-awesome';
+
+    /**
+     * @inheritdoc
+     */
+    public $publishOptions = [
+        'only' => ['fonts/', 'css/']
+    ];
 
     /**
      * @inheritdoc
