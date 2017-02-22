@@ -30,6 +30,7 @@ use kartik\base\AssetBundle;
  * - 'si' for Socicon Icons
  * - 'fi' for FlagIcon Icons
  * - 'oi' for Open Iconic Icons
+ * - 'if' for IcoFont Icons
  *
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  */
@@ -55,6 +56,7 @@ class Icon
     const OCT = 'oct';
     const FI = 'fi';
     const OI = 'oi';
+    const IF = 'if';
 
     /**
      * Icon framework configurations
@@ -71,6 +73,7 @@ class Icon
         self::OCT => ['prefix' => 'octicon octicon-', 'class' => 'OcticonsAsset'],
         self::FI => ['prefix' => 'flag-icon flag-icon-', 'class' => 'FlagIconAsset'],
         self::OI => ['prefix' => 'oi oi-', 'class' => 'OpenIconicAsset'],
+        self::IF => ['prefix' => 'icofont icofont-', 'class' => 'IcoFontAsset'],
     ];
 
     /**
