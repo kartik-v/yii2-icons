@@ -29,7 +29,7 @@ class FontAwesomeAsset extends BaseAssetBundle
      * @inheritdoc
      */
     public $publishOptions = [
-        'only' => ['fonts/', 'css/']
+        'only' => ['fonts/*', 'css/*']
     ];
 
     /**
