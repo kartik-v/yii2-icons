@@ -154,6 +154,18 @@ class Icon
         }
         return Yii::$app->params['icon-framework'];
     }
+    
+    /**
+     * Returns the prefix css framework setup from Yii parameters.
+     *
+     * @var string the framework to be used with the application
+     * @throws InvalidConfigException
+     */
+    public static function getFrameworkPrefix($framework = null, $method = 'show')
+    {
+        $key = static::getFramework($framework, $method);
+        return self::$_frameworks[$key]['prefix'];
+    }    
 
     /**
      * Returns the prefix for the css framework set (or parses framework setup in Yii parameters)
