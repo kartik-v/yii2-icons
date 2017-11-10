@@ -5,6 +5,7 @@ Change Log: `yii2-icons`
 
 **Date:** 10-Nov-2017
 
+- Cleanup composer and update dev-master alias.
 - (enh #30, #33): Update Elusive Icons library source
 - (enh #28): Correct Font Awesome Asset rendering
 

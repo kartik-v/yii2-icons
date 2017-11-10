@@ -18,7 +18,6 @@
             "homepage": "http://demos.krajee.com/"
         }
     ],
-    "minimum-stability": "stable",
     "require": {
         "yiisoft/yii2-jui": "*",
         "kartik-v/yii2-krajee-base": "*",
@@ -28,6 +27,11 @@
     "autoload": {
         "psr-4": {
             "kartik\\icons\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.4.x-dev"
         }
     }
 }
