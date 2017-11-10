@@ -3,7 +3,7 @@
 /**
  * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2017
  * @package yii2-icons
- * @version 1.4.2
+ * @version 1.4.3
  */
 
 namespace kartik\icons;
@@ -106,7 +106,7 @@ class Icon
     private static $_frameworks = [
         self::BSG => ['prefix' => 'glyphicon glyphicon-', 'class' => '\\yii\\bootstrap\\BootstrapAsset'],
         self::FA => ['prefix' => 'fa fa-', 'class' => 'FontAwesomeAsset'],
-        self::EL => ['prefix' => 'el-icon-', 'class' => 'ElusiveAsset'],
+        self::EL => ['prefix' => 'el el-', 'class' => 'ElusiveAsset'],
         self::TYP => ['prefix' => 'typcn typcn-', 'class' => 'TypiconsAsset'],
         self::WHHG => ['prefix' => 'icon-', 'class' => 'WhhgAsset'],
         self::JUI => ['prefix' => 'ui-icon ui-icon-', 'class' => 'JuiAsset'],

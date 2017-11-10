@@ -12,7 +12,7 @@ This extension offers an easy method to setup various icon frameworks to work wi
 1. [Bootstrap Glyphicons](http://getbootstrap.com/components/#glyphicons)
 2. [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
 3. [Unicode Icons](http://demos.krajee.com/uni-icons/): A collection of unicode symbols made available as CSS icons by Krajee
-4. [Elusive Icons](http://shoestrap.org/downloads/elusive-icons-webfont/)
+4. [Elusive Icons](http://elusiveicons.com/icons/)
 5. [Typicons](http://typicons.com/)
 6. [Web Hosting Hub Glyphs](http://www.webhostinghub.com/glyphs/)
 7. [JQuery UI Icons](http://api.jqueryui.com/theming/icons/)

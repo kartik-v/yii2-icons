@@ -3,7 +3,7 @@
 /**
  * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2017
  * @package yii2-icons
- * @version 1.4.2
+ * @version 1.4.3
  */
 
 namespace kartik\icons;
@@ -26,7 +26,7 @@ class ElusiveAsset extends BaseAssetBundle
     public function init()
     {
         $this->setSourcePath(__DIR__ . '/lib/elusive');
-        $this->setupAssets('css', ['css/elusive-webfont']);
+        $this->setupAssets('css', ['css/elusive-icons']);
         parent::init();
     }
 }

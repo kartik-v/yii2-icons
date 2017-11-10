@@ -3,7 +3,7 @@
 /**
  * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2017
  * @package yii2-icons
- * @version 1.4.2
+ * @version 1.4.3
  */
 
 namespace kartik\icons;
@@ -15,7 +15,7 @@ use kartik\base\BaseAssetBundle;
  *
  * @author Andrei Shvets <shvetsdnepr@gmail.com>
  * @author Kartik Visweswaran <kartikv2@gmail.com>
- * @since 1.4.2
+ * @since 1.4.3
  */
 
 class IcoFontAsset extends BaseAssetBundle
