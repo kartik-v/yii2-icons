@@ -1,7 +1,13 @@
 Change Log: `yii2-icons`
 ========================
 
-## Version 1.4.3
+## Version 1.4.4
+
+**Date:** 09-Mar-2018
+
+- (enh #34, #35): Add support for Font Awesome 5 (Free & Pro versions) and icon layering.
+
+## Version 1.4.4
 
 **Date:** 10-Nov-2017
 

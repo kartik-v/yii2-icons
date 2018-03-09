@@ -1,9 +1,9 @@
 <?php
 
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2017
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2018
  * @package yii2-icons
- * @version 1.4.3
+ * @version 1.4.4
  */
 
 namespace kartik\icons;
@@ -134,7 +134,7 @@ class Icon
      * Add a custom icon set to the icon frameworks
      *
      * @param string $key the key used to identify the icon set
-     * @param array  $config the icon configuration
+     * @param array $config the icon configuration
      */
     public static function addFramework($key, $config)
     {
@@ -183,13 +183,13 @@ class Icon
     /**
      * Maps the icon framework to the current view. Call this in your view or layout file.
      *
-     * @param View   $view the view object
+     * @param View $view the view object
      * @param string $framework the name of the framework, if not passed it will default to
      * the Yii config param 'icon-framework'
      */
     public static function map($view, $framework = null)
     {
-		$key = static::getFramework($framework, 'map');
+        $key = static::getFramework($framework, 'map');
         $class = self::$_frameworks[$key]['class'];
         if (substr($class, 0, 1) != '\\') {
             $class = self::NS . $class;
@@ -203,20 +203,21 @@ class Icon
     /**
      * Displays an icon for a specific framework.
      *
-     * @param string  $name the icon name
-     * @param array   $options the HTML attributes for the icon
-     * @param string  $framework the icon framework name. If not passed will default to the `icon-framework` param set
+     * @param string $name the icon name
+     * @param array $options the HTML attributes for the icon
+     * @param string $framework the icon framework name. If not passed will default to the `icon-framework` param set
      *     in Yii Configuration file. Will throw an InvalidConfigException if neither of the two is available.
      * @param boolean $space whether to place a space after the icon, defaults to true
-     * @param string  $tag the HTML tag to wrap the icon (defaults to `i`).
-	 * $param string  $fa5 the base class for FontAwesome5 (fas, far, fal or fab, defaults to fas).
+     * @param string $tag the HTML tag to wrap the icon (defaults to `i`).
+     * @param string $fa5 the base class for FontAwesome5 (fas, far, fal or fab, defaults to fas).
      *
      * @return string the HTML formatted icon
      */
     public static function show($name, $options = [], $framework = null, $space = true, $tag = 'i', $fa5 = 'fas')
     {
-        $tag = $tag === NULL ? 'i' : $tag;
-		$class = (substr(static::getFramework($framework),0,3) == 'fa5' ? $fa5 : '') . self::getFrameworkPrefix($framework) . $name;
+        $tag = $tag === null ? 'i' : $tag;
+        $class = (substr(static::getFramework($framework), 0,
+                3) == 'fa5' ? $fa5 : '') . self::getFrameworkPrefix($framework) . $name;
         Html::addCssClass($options, $class);
         return Html::tag($tag, '', $options) . ($space ? ' ' : '');
     }
@@ -226,19 +227,19 @@ class Icon
      *
      * @see http://fontawesome.io/examples/#stacked
      *
-     * @param string  $name2 the icon name in stack 2x
-     * @param string  $name1 the icon name in stack 1x
-     * @param array   $options the HTML attributes for the icon stack container
-     * @param array   $options2 the HTML attributes for the icon in stack 1x
-     * @param array   $options1 the HTML attributes for the icon in stack 2x
+     * @param string $name2 the icon name in stack 2x
+     * @param string $name1 the icon name in stack 1x
+     * @param array $options the HTML attributes for the icon stack container
+     * @param array $options2 the HTML attributes for the icon in stack 1x
+     * @param array $options1 the HTML attributes for the icon in stack 2x
      * @param boolean $invert whether to invert the order of stack 2x and 1x and place stack-1x before stack-2x.
      * Defaults to `false`.
-     * @param string  $framework the icon framework name. If not passed will default to the `icon-framework` param set
+     * @param string $framework the icon framework name. If not passed will default to the `icon-framework` param set
      * in Yii Configuration file. Will throw an InvalidConfigException if neither of the two is available.
      * @param boolean $space whether to place a space after the icon, defaults to `true`.
-     * @param string  $tag the html tag to wrap the icon (defaults to 'i').
-     * @param string  $stackTag the html tag to wrap the stack container (defaults to `span`).
-     * @param string  $stackPrefix the CSS prefix string for the stack container (defaults to `fa-stack`).
+     * @param string $tag the html tag to wrap the icon (defaults to 'i').
+     * @param string $stackTag the html tag to wrap the stack container (defaults to `span`).
+     * @param string $stackPrefix the CSS prefix string for the stack container (defaults to `fa-stack`).
      *
      * @return string the html formatted icon
      */
@@ -269,36 +270,37 @@ class Icon
      *
      * @see https://fontawesome.com/how-to-use/svg-with-js#layering
      *
-     * @param array   $items 	the icons to be displayed in the layer, each of which is array ['name'=>'play', 'style'=>'fas', 'options' => [], 'text' => NULL, 'tag' => NULL]:
-	 					* name		the name for the icon; or layers-text for text or layers-counter for counter
-						* options 	the html options for the icon in the layer
-						* text 		the text within the span container
-						* tag 		the tag for the icon, default <i> for non-text layers and <span> for text layers
-	 * @param array   $options 	the html options for the layers container
+     * @param array $items the icons to be displayed in the layer, each of which is array
+     * `['name'=>'play', 'style'=>'fas', 'options' => [], 'text' => NULL, 'tag' => NULL]`:
+     * - `name`: _string_, the name for the icon; or layers-text for text or layers-counter for counter
+     * - `options`: _array_, the html attributes configuration for the icon in the layer
+     * - `text`: _string_, the text within the span container
+     * - `tag`: _string_, the HTML tag for the icon, default `i` for non-text layers and `span` for text layers
+     * @param array $options the html options for the layers container
      * @param boolean $space whether to place a space after the icon, defaults to `true`.
-     * @param string  $tag the html tag to wrap the layers (defaults to 'span').
+     * @param string $tag the html tag to wrap the layers (defaults to 'span').
      *
      * @return string the html formatted icon
      */
     public static function showLayers($items = [], $options = [], $space = true, $tag = 'span')
     {
-		if(empty($items)){
-			return '';
-		}
-		$layers = '';
-		foreach($items as $item){
-			if(!array_key_exists('name',$item) || empty($item['name'])){
-				continue; //Nothing to display
-			}
-			$itemTag = array_key_exists('tag',$item) ? $item['tag'] : ( array_key_exists('text',$item) && !empty($item['text']) ? 'span' : 'i' );
-			$style = array_key_exists('style',$item) ? $item['style'] : 'fas'; //fas works always with FREE
-			$class = $style . ' fa-' . $item['name'];
-			$itemOptions = array_key_exists('options',$item) ? $item['options'] : [];
-			Html::addCssClass($itemOptions, $class);
-			$layers .= Html::tag($itemTag, '', $itemOptions) . "\n";
-		}
-		$containerClass = 'fa-layers fa-fw';
-		Html::addCssClass($options, $containerClass);
+        if (empty($items)) {
+            return '';
+        }
+        $layers = '';
+        foreach ($items as $item) {
+            if (!array_key_exists('name', $item) || empty($item['name'])) {
+                continue; //Nothing to display
+            }
+            $itemTag = array_key_exists('tag', $item) ? $item['tag'] : (array_key_exists('text',
+                $item) && !empty($item['text']) ? 'span' : 'i');
+            $style = array_key_exists('style', $item) ? $item['style'] : 'fas'; //fas works always with FREE
+            $class = $style . ' fa-' . $item['name'];
+            $itemOptions = array_key_exists('options', $item) ? $item['options'] : [];
+            Html::addCssClass($itemOptions, $class);
+            $layers .= Html::tag($itemTag, '', $itemOptions) . "\n";
+        }
+        Html::addCssClass($options, ['fa-layers', 'fa-fw']);
         return Html::tag($tag, $layers, $options) . ($space ? ' ' : '');
     }
 }
