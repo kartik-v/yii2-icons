@@ -21,6 +21,8 @@ use kartik\base\AssetBundle;
  *
  * - 'bsg' for Bootstrap Glyphicons
  * - 'fa' for Font Awesome Icons
+ * - 'fa5free' for Font Awesome 5 Free Icons
+ * - 'fa5pro' for Font Awesome 5 Pro Icons
  * - 'el' for Elusive Font Icons
  * - 'typ' for Typicon Font Icons
  * - 'whhg' for Web Hosting Hub Glyphs Icons
@@ -60,6 +62,14 @@ class Icon
      * Font Awesome Icons
      */
     const FA = 'fa';
+    /**
+     * Font Awesome Icons
+     */
+    const FA5FREE = 'fa5free';
+    /**
+     * Font Awesome Icons
+     */
+    const FA5PRO = 'fa5pro';
     /**
      * Elusive Icons
      */
@@ -106,6 +116,8 @@ class Icon
     private static $_frameworks = [
         self::BSG => ['prefix' => 'glyphicon glyphicon-', 'class' => '\\yii\\bootstrap\\BootstrapAsset'],
         self::FA => ['prefix' => 'fa fa-', 'class' => 'FontAwesomeAsset'],
+        self::FA5FREE => ['prefix' => ' fa-', 'class' => 'FontAwesomeFreeAsset'],
+        self::FA5PRO => ['prefix' => ' fa-', 'class' => 'FontAwesomeProAsset'],
         self::EL => ['prefix' => 'el el-', 'class' => 'ElusiveAsset'],
         self::TYP => ['prefix' => 'typcn typcn-', 'class' => 'TypiconsAsset'],
         self::WHHG => ['prefix' => 'icon-', 'class' => 'WhhgAsset'],
@@ -177,7 +189,7 @@ class Icon
      */
     public static function map($view, $framework = null)
     {
-        $key = static::getFramework($framework, 'map');
+		$key = static::getFramework($framework, 'map');
         $class = self::$_frameworks[$key]['class'];
         if (substr($class, 0, 1) != '\\') {
             $class = self::NS . $class;
@@ -197,12 +209,14 @@ class Icon
      *     in Yii Configuration file. Will throw an InvalidConfigException if neither of the two is available.
      * @param boolean $space whether to place a space after the icon, defaults to true
      * @param string  $tag the HTML tag to wrap the icon (defaults to `i`).
+	 * $param string  $fa5 the base class for FontAwesome5 (fas, far, fal or fab, defaults to fas).
      *
      * @return string the HTML formatted icon
      */
-    public static function show($name, $options = [], $framework = null, $space = true, $tag = 'i')
+    public static function show($name, $options = [], $framework = null, $space = true, $tag = 'i', $fa5 = 'fas')
     {
-        $class = self::getFrameworkPrefix($framework) . $name;
+        $tag = $tag === NULL ? 'i' : $tag;
+		$class = (substr(static::getFramework($framework),0,3) == 'fa5' ? $fa5 : '') . self::getFrameworkPrefix($framework) . $name;
         Html::addCssClass($options, $class);
         return Html::tag($tag, '', $options) . ($space ? ' ' : '');
     }
@@ -248,5 +262,43 @@ class Icon
         $icon2 = static::show($name2, $options2, $framework, $space, $tag);
         $icon = $invert ? $icon1 . "\n" . $icon2 : $icon2 . "\n" . $icon1;
         return Html::tag($stackTag, $icon, $options) . ($space ? ' ' : '');
+    }
+
+    /**
+     * Displays an icon layer stack as supported by Font Awesome 5
+     *
+     * @see https://fontawesome.com/how-to-use/svg-with-js#layering
+     *
+     * @param array   $items 	the icons to be displayed in the layer, each of which is array ['name'=>'play', 'style'=>'fas', 'options' => [], 'text' => NULL, 'tag' => NULL]:
+	 					* name		the name for the icon; or layers-text for text or layers-counter for counter
+						* options 	the html options for the icon in the layer
+						* text 		the text within the span container
+						* tag 		the tag for the icon, default <i> for non-text layers and <span> for text layers
+	 * @param array   $options 	the html options for the layers container
+     * @param boolean $space whether to place a space after the icon, defaults to `true`.
+     * @param string  $tag the html tag to wrap the layers (defaults to 'span').
+     *
+     * @return string the html formatted icon
+     */
+    public static function showLayers($items = [], $options = [], $space = true, $tag = 'span')
+    {
+		if(empty($items)){
+			return '';
+		}
+		$layers = '';
+		foreach($items as $item){
+			if(!array_key_exists('name',$item) || empty($item['name'])){
+				continue; //Nothing to display
+			}
+			$itemTag = array_key_exists('tag',$item) ? $item['tag'] : ( array_key_exists('text',$item) && !empty($item['text']) ? 'span' : 'i' );
+			$style = array_key_exists('style',$item) ? $item['style'] : 'fas'; //fas works always with FREE
+			$class = $style . ' fa-' . $item['name'];
+			$itemOptions = array_key_exists('options',$item) ? $item['options'] : [];
+			Html::addCssClass($itemOptions, $class);
+			$layers .= Html::tag($itemTag, '', $itemOptions) . "\n";
+		}
+		$containerClass = 'fa-layers fa-fw';
+		Html::addCssClass($options, $containerClass);
+        return Html::tag($tag, $layers, $options) . ($space ? ' ' : '');
     }
 }
