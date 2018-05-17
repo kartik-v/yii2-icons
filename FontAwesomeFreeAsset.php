@@ -25,7 +25,7 @@ class FontAwesomeFreeAsset extends AssetBundle
      * @inheritdoc
      */
     public $js = [
-		'https://use.fontawesome.com/releases/v5.0.6/js/all.js', //Use Free CDN
+		'https://use.fontawesome.com/releases/v5.0.13/js/all.js', //Use Free CDN
     ];
     /**
      * @inheritdoc
