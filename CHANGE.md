@@ -1,6 +1,16 @@
 Change Log: `yii2-icons`
 ========================
 
+## Version 1.4.5
+
+**Date:** 20-Sep-2018
+
+- Enhancements for Font Awesome 5.x layering features.
+- Ability to override Font Awesome Free 5.x asset load via Yii2 Asset Manager.
+- Remove Font Awesome 4.x support and include load Font Awesome Free 5.x JS/SVG asset 
+- Enhancements to support Bootstrap 4.x
+- Move all source code to `src` directory
+
 ## Version 1.4.4
 
 **Date:** 09-Mar-2018

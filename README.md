@@ -2,6 +2,7 @@ yii2-icons
 ==========
 
 [![Latest Stable Version](https://poser.pugx.org/kartik-v/yii2-icons/v/stable)](https://packagist.org/packages/kartik-v/yii2-icons)
+[![Latest Unstable Version](https://poser.pugx.org/kartik-v/yii2-icons/v/unstable)](https://packagist.org/packages/kartik-v/yii2-icons)
 [![License](https://poser.pugx.org/kartik-v/yii2-icons/license)](https://packagist.org/packages/kartik-v/yii2-icons)
 [![Total Downloads](https://poser.pugx.org/kartik-v/yii2-icons/downloads)](https://packagist.org/packages/kartik-v/yii2-icons)
 [![Monthly Downloads](https://poser.pugx.org/kartik-v/yii2-icons/d/monthly)](https://packagist.org/packages/kartik-v/yii2-icons)
@@ -10,7 +11,7 @@ yii2-icons
 This extension offers an easy method to setup various icon frameworks to work with Yii Framework 2.0. Most popular and free icon frameworks available are currently supported. This list may be extended in future based on demand and feedback.
 
 1. [Bootstrap Glyphicons](http://getbootstrap.com/components/#glyphicons)
-2. [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+2. [Font Awesome](https://fontawesome.com/icons)
 3. [Unicode Icons](http://demos.krajee.com/uni-icons/): A collection of unicode symbols made available as CSS icons by Krajee
 4. [Elusive Icons](http://elusiveicons.com/icons/)
 5. [Typicons](http://typicons.com/)
@@ -23,6 +24,7 @@ This extension offers an easy method to setup various icon frameworks to work wi
 12. [IcoFont Icons](http://icofont.com/)
 
 ### Demo
+
 You can see a [demonstration here](http://demos.krajee.com/icons) on usage of this extension with documentation and examples.
 
 ## Installation
@@ -54,7 +56,7 @@ In case you wish to setup one Icon framework globally, set the parameter `icon-f
 
 ```php
 'params' => [
-  'icon-framework' => 'fa',  // Font Awesome Icon framework
+  'icon-framework' => \kartik\icons\Icon::FAS,  // Font Awesome Icon framework
 ]
 ```
 To initialize the globally setup framework in your view, call this code in your view or view layout file.
@@ -84,7 +86,7 @@ use kartik\icons\Icon;
 echo Icon::show('user'); 
 
 // Option 2: Specific Icon Call in a view. Additional options can also be passed to style the icon.
-echo Icon::show('user', ['class'=>'fa-2x'], Icon::FA); 
+echo Icon::show('user', ['class'=>'fa-2x', 'framework' => Icon::FAS]); 
 ```
 
 > NOTE:
@@ -98,7 +100,7 @@ $items = [
 // Your other code
 
 /* Note you must encodeLabels to false to display icons in labels */
-echo \yii\bootstrap\Nav::widget([
+echo \kartik\nav\NavX::widget([
     'items' => $items,
     'encodeLabels' => false
 ]);
@@ -112,11 +114,11 @@ You can also display stacked icons for frameworks like Font Awesome, where this 
 
 ```php
 use kartik\icons\Icon;
-// fa-twitter on fa-square-o
-Icon::showStack('square-o', 'twitter', ['class'=>'fa-lg']);
+// fa-twitter on fa-square
+ Icon::showStack('twitter', 'square', ['class'=>'fa-lg'], ['framework' => Icon::FAB], ['framework' => Icon::FAR])
 
 // fa-flag on fa-circle
-Icon::showStack('circle', 'flag', ['class'=>'fa-lg'], ['class'=>'fa-inverse']);
+ Icon::showStack('flag', 'circle', ['class'=>'fa-lg'], ['class'=>'fa-inverse']);
 ```
 
 ### Add Custom Icons
@@ -135,7 +137,7 @@ Icon::addFramework('custom', [
 Icon::map($this, 'custom');
 
 // show the icon
-echo Icon::show('menu',[], 'custom');
+echo Icon::show('menu',['framework' => 'custom']);
 ```
 
 ```php
@@ -145,7 +147,7 @@ class CustomIconAsset extends \yii\web\AssetBundle
     public $sourcePath = '@common/icons/assets/custom';
     public $depends = array(
         'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset'
+        'yii\bootstrap4\BootstrapAsset'
     );
     public $css=[
         'css/animation.css',
@@ -161,4 +163,4 @@ The above asset bundle uses files genereted by http://fontello.com/.
 
 ## License
 
-**yii2-icons** is released under the BSD 3-Clause License. See the bundled `LICENSE.md` for details.
+**yii2-icons** is released under the BSD-3-Clause License. See the bundled `LICENSE.md` for details.

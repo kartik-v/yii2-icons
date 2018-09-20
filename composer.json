@@ -10,7 +10,7 @@
     ],
     "homepage": "https://github.com/kartik-v/yii2-icons",
     "type": "yii2-extension",
-    "license": "BSD 3-Clause",
+    "license": "BSD-3-Clause",
     "authors": [
         {
             "name": "Kartik Visweswaran",
@@ -19,14 +19,13 @@
         }
     ],
     "require": {
+        "kartik-v/yii2-krajee-base": ">=1.9",
         "yiisoft/yii2-jui": "*",
-        "kartik-v/yii2-krajee-base": "*",
-        "fortawesome/font-awesome": "*",
         "components/flag-icon-css": "*"
     },
     "autoload": {
         "psr-4": {
-            "kartik\\icons\\": ""
+            "kartik\\icons\\": "src"
         }
     },
     "extra": {
