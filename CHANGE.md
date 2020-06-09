@@ -1,6 +1,15 @@
 Change Log: `yii2-icons`
 ========================
 
+## Version 1.4.6
+
+**Date:** 09-Jun-2020
+
+- (enh #42): Update FontAwesome to use v5.13.0.
+- (enh #41): Support for Font Awesome duotone and any other Pro icons.
+- (enh #39): Correct deprecated params use for Icon::show.
+- (enh #36): Update FontAwesome to use v5.0.13.
+
 ## Version 1.4.5
 
 **Date:** 20-Sep-2018

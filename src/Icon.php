@@ -1,9 +1,9 @@
 <?php
 
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2018
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2020
  * @package yii2-icons
- * @version 1.4.5
+ * @version 1.4.6
  */
 
 namespace kartik\icons;
@@ -21,7 +21,7 @@ use kartik\base\AssetBundle;
  * to one of the following values in your config file:
  *
  * - 'bsg' for Bootstrap Glyphicons
- * - 'fas' for Font Awesome Icons
+ * - 'fa_' for Font Awesome Icons 
  * - 'el' for Elusive Font Icons
  * - 'typ' for Typicon Font Icons
  * - 'whhg' for Web Hosting Hub Glyphs Icons
@@ -73,6 +73,10 @@ class Icon
      * Font Awesome Icons Brand
      */
     const FAB = 'fab';
+    /**
+     * Font Awesome Icons Duotone
+     */
+    const FAD = 'faD';
     /**
      * Font Awesome Icons Light
      */
@@ -126,6 +130,7 @@ class Icon
         self::FAS => ['prefix' => 'fas fa-', 'class' => 'FontAwesomeAsset'],
         self::FAR => ['prefix' => 'far fa-', 'class' => 'FontAwesomeAsset'],
         self::FAB => ['prefix' => 'fab fa-', 'class' => 'FontAwesomeAsset'],
+        self::FAD => ['prefix' => 'fad fa-', 'class' => 'FontAwesomeAsset'],
         self::FAL => ['prefix' => 'fal fa-', 'class' => 'FontAwesomeAsset'],
         self::EL => ['prefix' => 'el el-', 'class' => 'ElusiveAsset'],
         self::TYP => ['prefix' => 'typcn typcn-', 'class' => 'TypiconsAsset'],
@@ -222,15 +227,19 @@ class Icon
      *     in Yii Configuration file. Will throw an InvalidConfigException if neither of the two is available.
      * - `space`: _boolean_, whether to place a space after the icon, defaults to true
      * - `tag`: _string_, the HTML tag to wrap the icon (defaults to `i`).
+     * @param string $framework deprecated since v1.4.5 (use/see $options above)
+     * @param bool $space deprecated since v1.4.5 (use/see $options above)
+     * @param string $tag deprecated since v1.4.5 (use/see $options above)
+     * @param string $fa5 deprecated since v1.4.5
      *
      * @return string the HTML formatted icon
      * @throws InvalidConfigException
      */
-    public static function show($name, $options = [])
+    public static function show($name, $options = [], $framework = null, $space = true, $tag = 'i', $fa5 = 'fas')
     {
-        $framework = ArrayHelper::remove($options, 'framework', null);
-        $space = ArrayHelper::remove($options, 'space', true);
-        $tag = ArrayHelper::remove($options, 'tag', 'i');
+        $framework = ArrayHelper::remove($options, 'framework', $framework);
+        $space = ArrayHelper::remove($options, 'space', $space);
+        $tag = ArrayHelper::remove($options, 'tag', $tag);
         $class = self::getFrameworkPrefix($framework) . $name;
         Html::addCssClass($options, $class);
         return Html::tag($tag, '', $options) . ($space ? ' ' : '');
