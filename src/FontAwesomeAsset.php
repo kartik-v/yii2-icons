@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2020
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2021
  * @package yii2-icons
  * @version 1.4.6
  */
@@ -28,7 +28,8 @@ class FontAwesomeAsset extends AssetBundle
         // font awesome free version (can be overridden from yii2 asset manager)
         //'https://use.fontawesome.com/releases/v5.13.0/js/all.js'
         // Better use CDN version, or else China site would have issue to get the JS.  Below CDN available for worldwide
-        'https://cdn.bootcss.com/font-awesome/5.3.1/js/all.js'
+        // Corrected CDN version (12-Jan-2021) to latest and to use minified assets - kartik-v
+        'https://cdn.bootcss.com/font-awesome/5.15.1/js/all.min.js'
     ];
 
     /**
