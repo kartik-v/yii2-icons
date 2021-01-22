@@ -1,6 +1,12 @@
 Change Log: `yii2-icons`
 ========================
 
+## Version 1.4.7
+
+**Date:** _under development_
+
+- (enh #45): Revert to use default Font Awesome CDN.
+
 ## Version 1.4.6
 
 **Date:** 12-Jan-2021
