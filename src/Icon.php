@@ -166,7 +166,7 @@ class Icon
      */
     protected static function getFramework($framework = null, $method = 'show')
     {
-        $len = strlen($framework);
+        $len = empty($framework)?0:strlen($framework);
         if ($len > 0 && !in_array($framework, array_keys(self::$_frameworks))) {
             $replace = ['{framework}' => $framework, '{method}' => 'Icon::' . $method];
             throw new InvalidConfigException(strtr(self::FRAMEWORK_INVALID, $replace));
