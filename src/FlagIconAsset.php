@@ -1,16 +1,16 @@
 <?php
 
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2021
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2022
  * @package yii2-icons
- * @version 1.4.7
+ * @version 1.4.8
  */
 
 namespace kartik\icons;
 use kartik\base\BaseAssetBundle;
 
 /**
- * Asset bundle for FlagIcon icon set. Uses client assets (CSS, images, and fonts) from flag icons repository.
+ * Asset bundle for the FlagIcon icon set. Uses client assets (CSS, images, and fonts) from flag icons repository.
  * 
  * @see http://lipis.github.io/flag-icon-css/
  *

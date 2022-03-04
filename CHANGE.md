@@ -1,9 +1,17 @@
 Change Log: `yii2-icons`
 ========================
 
+## Version 1.4.8
+
+**Date:** 04-Mar-2022
+
+- (enh #49, #50): Enhance compatibility for PHP 8.1.
+- Enhance & standardize php docs for new website https://docs.krajee.com.
+
 ## Version 1.4.7
 
 **Date:** 08-Apr-2021
+
 - (enh #45): Revert to use default Font Awesome CDN.
 
 ## Version 1.4.6

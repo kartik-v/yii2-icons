@@ -1,13 +1,14 @@
 <?php
 
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2021
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2022
  * @package yii2-icons
- * @version 1.4.7
+ * @version 1.4.8
  */
 
 namespace kartik\icons;
 
+use kartik\base\Lib;
 use Yii;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
@@ -38,91 +39,91 @@ use kartik\base\AssetBundle;
 class Icon
 {
     /**
-     * Icons Namespace
+     * @var string Icons Namespace
      */
     const NS = '\\kartik\\icons\\';
     /**
-     * Exception message displayed when `icon-framework` has not been setup in Yii2 Params Configuration file.
+     * @var string Exception message displayed when `icon-framework` has not been setup in Yii2 Params Configuration file.
      */
     const PARAM_NOT_SET = "The 'icon-framework' option has not been setup in Yii params. Check your configuration file.";
     /**
-     * Exception message displayed when `icon-framework` has an invalid configuration in Yii2 Params Configuration file.
+     * @var string Exception message displayed when `icon-framework` has an invalid configuration in Yii2 Params Configuration file.
      */
     const PARAM_INVALID = "Invalid or non-recognized 'icon-framework' has been setup in Yii params. Check your configuration file.";
     /**
-     * Exception message displayed when an invalid icon framework has been detected by the [[getFramework]] method.
+     * @var string Exception message displayed when an invalid icon framework has been detected by the [[getFramework]] method.
      */
     const FRAMEWORK_INVALID = "Invalid or non-existing framework '{framework}' called in your {method}() method.";
     /**
-     * Bootstrap Glyphicons
+     * @var string Bootstrap Glyphicons
      */
     const BSG = 'bsg';
     /**
-     * Font Awesome Icons Solid
+     * @var string Font Awesome Icons Solid
      */
     const FA = 'fa';
     /**
-     * Font Awesome Icons Solid
+     * @var string Font Awesome Icons Solid
      */
     const FAS = 'fas';
     /**
-     * Font Awesome Icons Regular
+     * @var string Font Awesome Icons Regular
      */
     const FAR = 'far';
     /**
-     * Font Awesome Icons Brand
+     * @var string Font Awesome Icons Brand
      */
     const FAB = 'fab';
     /**
-     * Font Awesome Icons Duotone
+     * @var string Font Awesome Icons Duotone
      */
     const FAD = 'faD';
     /**
-     * Font Awesome Icons Light
+     * @var string Font Awesome Icons Light
      */
     const FAL = 'fal';
     /**
-     * Elusive Icons
+     * @var string Elusive Icons
      */
     const EL = 'el';
     /**
-     * TypIcon Icons
+     * @var string TypIcon Icons
      */
     const TYP = 'typ';
     /**
-     * Web Hosting Hub Glyphs
+     * @var string Web Hosting Hub Glyphs
      */
     const WHHG = 'whhg';
     /**
-     * JQuery UI Icons
+     * @var string JQuery UI Icons
      */
     const JUI = 'jui';
     /**
-     * Krajee Unicode Icons
+     * @var string Krajee Unicode Icons
      */
     const UNI = 'uni';
     /**
-     * SocIcon Icons
+     * @var string SocIcon Icons
      */
     const SI = 'si';
     /**
-     * Github Octicons
+     * @var string Github Octicons
      */
     const OCT = 'oct';
     /**
-     * FlagIcon Icons
+     * @var string FlagIcon Icons
      */
     const FI = 'fi';
     /**
-     * OpenIconic Icons
+     * @var string OpenIconic Icons
      */
     const OI = 'oi';
     /**
-     * IcoFont Icons
+     * @var string IcoFont Icons
      */
     const ICF = 'icf';
     /**
-     * Icon framework configurations
+     * @var string Icon framework configurations
      */
     private static $_frameworks = [
         self::BSG => ['prefix' => 'glyphicon glyphicon-', 'class' => '\\yii\\bootstrap\\BootstrapAsset'],
@@ -166,10 +167,10 @@ class Icon
      */
     protected static function getFramework($framework = null, $method = 'show')
     {
-        $len = strlen($framework);
+        $len = Lib::strlen($framework);
         if ($len > 0 && !in_array($framework, array_keys(self::$_frameworks))) {
             $replace = ['{framework}' => $framework, '{method}' => 'Icon::' . $method];
-            throw new InvalidConfigException(strtr(self::FRAMEWORK_INVALID, $replace));
+            throw new InvalidConfigException(Lib::strtr(self::FRAMEWORK_INVALID, $replace));
         }
         if ($len > 0) {
             return $framework;
@@ -209,7 +210,7 @@ class Icon
     {
         $key = static::getFramework($framework, 'map');
         $class = self::$_frameworks[$key]['class'];
-        if (substr($class, 0, 1) != '\\') {
+        if (Lib::substr($class, 0, 1) != '\\') {
             $class = self::NS . $class;
         }
         /**

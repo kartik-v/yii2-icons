@@ -1,9 +1,9 @@
 <?php
 
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2021
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2022
  * @package yii2-icons
- * @version 1.4.7
+ * @version 1.4.8
  */
 
 namespace kartik\icons;
@@ -11,7 +11,7 @@ namespace kartik\icons;
 use kartik\base\BaseAssetBundle;
 
 /**
- * Asset bundle for Web Hosting Hub Glyphs. Uses client assets (CSS, images, and fonts) from WHHG repository.
+ * Asset bundle for the Web Hosting Hub Glyphs. Uses client assets (CSS, images, and fonts) from WHHG repository.
  *
  * @see http://www.webhostinghub.com/glyphs/
  *

@@ -1,9 +1,9 @@
 <?php
 
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2021
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2022
  * @package yii2-icons
- * @version 1.4.7
+ * @version 1.4.8
  */
 
 namespace kartik\icons;
@@ -12,7 +12,7 @@ use yii\web\AssetBundle;
 use yii\web\View;
 
 /**
- * Asset bundle for FontAwesome SVG/JS icon set. Uses SVG/JS client assets from font-awesome CDN repository.
+ * Asset bundle for the FontAwesome SVG/JS icon set. Uses SVG/JS client assets from font-awesome CDN repository.
  *
  * @see http://fortawesome.github.io/Font-Awesome/
  *

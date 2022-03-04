@@ -6,9 +6,9 @@
     yii2-icons
     <hr>
     <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DTP3NZQ6G2AYU"
-       title="Donate via Paypal" target="_blank">
-        <img src="http://kartik-v.github.io/bootstrap-fileinput-samples/samples/donate.png" alt="Donate"/>
-    </a>
+       title="Donate via Paypal" target="_blank"><img height="60" src="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/donate.png" alt="Donate"/></a>
+    &nbsp; &nbsp; &nbsp;
+    <a href="https://www.buymeacoffee.com/kartikv" title="Buy me a coffee" ><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="60" alt="kartikv" /></a>
 </h1>
 
 [![Latest Stable Version](https://poser.pugx.org/kartik-v/yii2-icons/v/stable)](https://packagist.org/packages/kartik-v/yii2-icons)
@@ -35,7 +35,7 @@ This extension offers an easy method to setup various icon frameworks to work wi
 
 ### Demo
 
-You can see a [demonstration here](http://demos.krajee.com/icons) on usage of this extension with documentation and examples.
+You can see a [demonstration here](http://demos.krajee.com/icons) and [API Code Documentation](https://docs.krajee.com/kartik-icons-icon) on usage of this extension with documentation and examples.
 
 ## Installation
 
