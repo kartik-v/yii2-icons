@@ -30,7 +30,7 @@ class FlagIconAsset extends BaseAssetBundle
      */
     public function init()
     {
-        $this->setupAssets('css', ['css/flag-icon']);
+        $this->setupAssets('css', ['css/flag-icons']);
         parent::init();
     }
 }
