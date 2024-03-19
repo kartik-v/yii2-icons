@@ -140,7 +140,7 @@ class Icon
         self::UNI => ['prefix' => 'uni uni-', 'class' => 'UniAsset'],
         self::SI => ['prefix' => 'socicon socicon-', 'class' => 'SociconAsset'],
         self::OCT => ['prefix' => 'octicon octicon-', 'class' => 'OcticonsAsset'],
-        self::FI => ['prefix' => 'flag-icon flag-icon-', 'class' => 'FlagIconAsset'],
+        self::FI => ['prefix' => 'fi fi-', 'class' => 'FlagIconAsset'],
         self::OI => ['prefix' => 'oi oi-', 'class' => 'OpenIconicAsset'],
         self::ICF => ['prefix' => 'icofont icofont-', 'class' => 'IcoFontAsset'],
     ];

@@ -29,7 +29,7 @@ This extension offers an easy method to setup various icon frameworks to work wi
 7. [JQuery UI Icons](http://api.jqueryui.com/theming/icons/)
 8. [Socicon Icons](http://www.socicon.com/): Needs you to add attribution to the icon source.
 9. [Octicons](https://octicons.github.com/): The Github icons collection.
-10. [Flag-Icons](http://lipis.github.io/flag-icon-css/)
+10. [Flag-Icons](https://lipis.github.io/flag-icons/)
 11. [Open Iconic Icons](https://useiconic.com/open#icons)
 12. [IcoFont Icons](http://icofont.com/)
 
